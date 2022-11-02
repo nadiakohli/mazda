@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import { cars } from 'config/config';
 
@@ -11,11 +10,7 @@ import Card from 'components/common/Card';
 import Driving from 'components/Home/Driving';
 
 // Styles
-const CardWrap = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+import { CardWrap } from './styled';
 
 const Home = () => (
   <>

@@ -7,6 +7,8 @@ export const HeaderWrap = styled.header`
   align-items: center;
   width: 100%;
   height: 75px;
+  padding: 0 135px;
+  background-color: ${({ backgroundColor }) => backgroundColor || 'transparent'};
 
   & svg {
     height: 22px;

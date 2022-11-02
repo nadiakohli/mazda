@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 // Images
@@ -9,8 +10,8 @@ import { ReactComponent as Location } from 'assets/icons/location.svg';
 // Styles
 import { HeaderWrap, Logo, NavLink } from './styled';
 
-const Header = () => (
-  <HeaderWrap>
+const Header = ({ backgroundColor }) => (
+  <HeaderWrap backgroundColor={backgroundColor}>
     <Logo src={logo} alt="logo" />
     <nav>
       <ul>

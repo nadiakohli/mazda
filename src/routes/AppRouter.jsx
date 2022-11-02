@@ -7,12 +7,13 @@ import {
 
 // Pages
 import Home from 'pages/Home';
+import Models from 'pages/Models';
 
 const AppRouter = () => (
   <Router>
     <Routes>
       <Route index element={<Home />} />
-      <Route path="/models" element={<h1>Models</h1>} />
+      <Route path="/models" element={<Models />} />
       <Route path="*" element={<h1>Not Found</h1>} />
     </Routes>
   </Router>

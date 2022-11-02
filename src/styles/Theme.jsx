@@ -15,6 +15,8 @@ export const theme = {
     mirage: '#191919',
     monsoon: '#d5dadf',
     platinum: '#e3e3e3',
+    quillGray: '#D5D5D5',
+    dawn: '#9FA19F',
   },
   fonts: {
     ubuntu: 'Ubuntu, sans-serif',
