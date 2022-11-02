@@ -3,47 +3,43 @@ import PropTypes from 'prop-types';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 // Fonts
-import thin from 'assets/fonts/Roboto-Thin.ttf';
-import light from 'assets/fonts/Roboto-Light.ttf';
-import regular from 'assets/fonts/Roboto-Regular.ttf';
-import medium from 'assets/fonts/Roboto-Medium.ttf';
-import bold from 'assets/fonts/Roboto-Bold.ttf';
+import light from 'assets/fonts/Ubuntu-Light.ttf';
+import regular from 'assets/fonts/Ubuntu-Regular.ttf';
+import medium from 'assets/fonts/Ubuntu-Medium.ttf';
+import bold from 'assets/fonts/Ubuntu-Bold.ttf';
 
-const theme = {
+export const theme = {
   colors: {
     white: '#ffffff',
+    black: '#000000',
     mirage: '#191919',
-    monsoon: '#838485',
+    monsoon: '#d5dadf',
+    platinum: '#e3e3e3',
   },
   fonts: {
-    roboto: 'Roboto, sans-serif',
+    ubuntu: 'Ubuntu, sans-serif',
   },
 };
 
 // Global style
 export const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: 'Roboto-Thin';
-    src: url(${thin}) format('ttf');
-  }
-
-  @font-face {
-    font-family: 'Roboto-Light';
+    font-family: 'Ubuntu-Light';
     src: url(${light}) format('ttf');
   }
 
   @font-face {
-    font-family: 'Roboto-Regular';
+    font-family: 'Ubuntu-Regular';
     src: url(${regular}) format('ttf');
   }
 
   @font-face {
-    font-family: 'Roboto-Medium';
+    font-family: 'Ubuntu-Medium';
     src: url(${medium}) format('ttf');
   }
-  
+
   @font-face {
-    font-family: 'Roboto-Bold';
+    font-family: 'Ubuntu-Bold';
     src: url(${bold}) format('ttf');
   }
 `;
