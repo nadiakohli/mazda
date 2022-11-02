@@ -16,8 +16,8 @@ export const ContentWrap = styled.div`
   flex-direction: column;
   width: 45%;
   position: absolute;
-  bottom: 50px;
-  right: 0;
+  top: 30%;
+  right: 15%;
 
   & h2, span, p {
     color: ${({ theme: { colors: { monsoon } } }) => monsoon};

@@ -14,6 +14,7 @@ export const theme = {
     black: '#000000',
     mirage: '#191919',
     monsoon: '#d5dadf',
+    platinum: '#e3e3e3',
   },
   fonts: {
     ubuntu: 'Ubuntu, sans-serif',
