@@ -2,11 +2,15 @@ import React from 'react';
 
 // Components
 import Main from 'components/Home/Main';
+import AboutModel from 'components/Home/AboutModel';
+import Footer from 'components/common/Footer';
 
 const Home = () => (
-  <div>
+  <>
     <Main />
-  </div>
+    <AboutModel />
+    <Footer />
+  </>
 );
 
 export default Home;
