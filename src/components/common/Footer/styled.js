@@ -13,9 +13,16 @@ export const FooterStyle = styled.footer`
     width: 18px;
     height: 18px;
     margin-right: 5px;
+    cursor: pointer;
+    
     & path {
       fill: ${({ theme: { colors: { monsoon } } }) => monsoon};
       opacity: 0.8;
+    }
+
+    & path:hover {
+      fill: ${({ theme: { colors: { white } } }) => white};
+      opacity: 1;
     }
   }
 `;
@@ -49,6 +56,12 @@ export const SpanWrap = styled.div`
 export const Span = styled.span`
   font-size: 12px;
   text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    color: ${({ theme: { colors: { white } } }) => white};
+    opacity: 1;
+  }
 `;
 
 export const BlockWrap = styled.div`
