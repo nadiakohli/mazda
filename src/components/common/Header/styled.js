@@ -36,7 +36,7 @@ export const HeaderWrap = styled.header`
   }
 `;
 
-export const Logo = styled.img`
+export const Image = styled.img`
   height: 45px;
   width: 55px;
 `;
@@ -54,4 +54,10 @@ export const NavLink = styled(Link)`
     color: ${({ theme: { colors: { white } } }) => white};
     opacity: 1;
   }
+`;
+
+export const LogoBtn = styled.button`
+  background: transparent;
+  border: none;
+  cursor: pointer;
 `;

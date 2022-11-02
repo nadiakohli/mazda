@@ -1,5 +1,6 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 // Images
 import logo from 'assets/images/logo.png';
@@ -8,36 +9,51 @@ import logo from 'assets/images/logo.png';
 import { ReactComponent as Location } from 'assets/icons/location.svg';
 
 // Styles
-import { HeaderWrap, Logo, NavLink } from './styled';
+import {
+  HeaderWrap,
+  Image,
+  NavLink,
+  LogoBtn,
+} from './styled';
 
-const Header = ({ backgroundColor }) => (
-  <HeaderWrap backgroundColor={backgroundColor}>
-    <Logo src={logo} alt="logo" />
-    <nav>
-      <ul>
-        <li>
-          <NavLink to="/models">Models</NavLink>
-        </li>
-        <li>
-          <NavLink to="/">Shooping Tools</NavLink>
-        </li>
-        <li>
-          <NavLink to="/">Why mazda</NavLink>
-        </li>
-        <li>
-          <NavLink to="/">Owners</NavLink>
-        </li>
-        <li>
-          <NavLink to="/">Find a dealer</NavLink>
-        </li>
-        <li>
-          <NavLink to="/">
-            <Location />
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
-  </HeaderWrap>
-);
+const Header = ({ backgroundColor }) => {
+  const navigate = useNavigate();
+
+  return (
+    <HeaderWrap backgroundColor={backgroundColor}>
+      <LogoBtn onClick={() => navigate('/', { replace: true })}>
+        <Image src={logo} alt="logo" />
+      </LogoBtn>
+      <nav>
+        <ul>
+          <li>
+            <NavLink to="/models">Models</NavLink>
+          </li>
+          <li>
+            <NavLink to="/">Shooping Tools</NavLink>
+          </li>
+          <li>
+            <NavLink to="/">Why mazda</NavLink>
+          </li>
+          <li>
+            <NavLink to="/">Owners</NavLink>
+          </li>
+          <li>
+            <NavLink to="/">Find a dealer</NavLink>
+          </li>
+          <li>
+            <NavLink to="/">
+              <Location />
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </HeaderWrap>
+  );
+};
+
+Header.propTypes = {
+  backgroundColor: PropTypes.string.isRequired,
+};
 
 export default Header;
