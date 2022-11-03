@@ -8,7 +8,7 @@ import {
 // Pages
 import Home from 'pages/Home';
 import Models from 'pages/Models';
-import Configurator from 'components/Configurator';
+import Configurator from 'pages/Configurator';
 
 const AppRouter = () => (
   <Router>
