@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Wrap = styled.div`
-  width: 45%;
+  width: 38%;
   height: 560px;
 `;
 
@@ -43,7 +44,11 @@ export const DescriptionWrap = styled.div`
   }
 `;
 
-export const Button = styled.button`
+export const LinkBtn = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   width: 175px;
   height: 50px;
   border: 2px solid ${({ theme: { colors: { mirage } } }) => mirage};

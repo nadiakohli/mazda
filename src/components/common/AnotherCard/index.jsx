@@ -6,10 +6,11 @@ import {
   Wrap,
   DescriptionWrap,
   ImageWrap,
-  Button,
+  LinkBtn,
 } from './styled';
 
 const AnotherCard = ({
+  to,
   link,
   title,
   fuel,
@@ -25,7 +26,7 @@ const AnotherCard = ({
     <DescriptionWrap>
       <div>
         <h2>{title}</h2>
-        <Button size="small">{fuel}</Button>
+        <LinkBtn size="small">{fuel}</LinkBtn>
         <p>
           <span>Color:</span>
           {' '}
@@ -47,14 +48,13 @@ const AnotherCard = ({
           {price}
         </p>
       </div>
-      <div>
-        <Button>More details</Button>
-      </div>
+      <LinkBtn to={`/models/${to}`}>More details</LinkBtn>
     </DescriptionWrap>
   </Wrap>
 );
 
 AnotherCard.propTypes = {
+  to: PropTypes.number.isRequired,
   link: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   fuel: PropTypes.string.isRequired,

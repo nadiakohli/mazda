@@ -25,6 +25,7 @@ const Models = () => (
         {cars2.length
           ? cars2.map((item) => (
             <AnotherCard
+              to={item.id}
               key={item.id}
               link={item.image}
               title={item.title}
