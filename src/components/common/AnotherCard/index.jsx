@@ -17,6 +17,7 @@ const AnotherCard = ({
   color,
   salon,
   engine,
+  alloyWheel,
   price,
 }) => (
   <Wrap>
@@ -43,9 +44,16 @@ const AnotherCard = ({
           {engine}
         </p>
         <p>
+          <span>Alloy wheel:</span>
+          {' '}
+          {alloyWheel}
+        </p>
+        <p>
           <span>Price:</span>
           {' '}
           {price}
+          {' '}
+          $
         </p>
       </div>
       <LinkBtn to={`/models/${to}`}>More details</LinkBtn>
@@ -61,6 +69,7 @@ AnotherCard.propTypes = {
   color: PropTypes.string.isRequired,
   salon: PropTypes.string.isRequired,
   engine: PropTypes.string.isRequired,
+  alloyWheel: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
 };
 

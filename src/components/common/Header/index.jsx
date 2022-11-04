@@ -53,7 +53,11 @@ const Header = ({ backgroundColor }) => {
 };
 
 Header.propTypes = {
-  backgroundColor: PropTypes.string.isRequired,
+  backgroundColor: PropTypes.string,
+};
+
+Header.defaultProps = {
+  backgroundColor: '',
 };
 
 export default Header;

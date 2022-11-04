@@ -1,5 +1,6 @@
 import React from 'react';
-import { cars2 } from 'config/config';
+
+import { carsModel } from 'config/config';
 
 // Components
 import Header from 'components/common/Header';
@@ -22,17 +23,18 @@ const Models = () => (
         <h1>Our Models</h1>
       </TitleWrap>
       <CardWrap>
-        {cars2.length
-          ? cars2.map((item) => (
+        {carsModel.length
+          ? carsModel.map((item) => (
             <AnotherCard
               to={item.id}
               key={item.id}
-              link={item.image}
+              link={item.image[0]}
               title={item.title}
               fuel={item.fuel}
               color={item.color}
               salon={item.salon}
               engine={item.engine}
+              alloyWheel={item.alloyWheel}
               price={item.price}
             />
           ))
