@@ -27,7 +27,7 @@ const Models = () => (
             <AnotherCard
               to={item.id}
               key={item.id}
-              link={item.image}
+              link={item.image[0]}
               title={item.title}
               fuel={item.fuel}
               color={item.color}

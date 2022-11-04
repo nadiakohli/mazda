@@ -1,53 +1,50 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import { useParams } from 'react-router-dom';
-
-import { cars2 } from 'config/config';
 
 // Styles
 import { LinkBtn } from 'components/common/AnotherCard/styled';
-import { Wrap } from './styled';
+import { Wrap, Test } from './styled';
 
-const Description = () => {
-  const { id } = useParams();
-  const obj = cars2.find((item) => {
-    if (item.id === parseInt(id, 10)) {
-      return item;
-    }
-    return item;
-  });
-  return (
-    <Wrap>
-      <div>
-        <h2>{obj.title}</h2>
-        <LinkBtn size="small">{obj.fuel}</LinkBtn>
-        <p>
-          <span>Color:</span>
-          {' '}
-          {obj.color}
-        </p>
-        <p>
-          <span>Salon:</span>
-          {' '}
-          {obj.salon}
-        </p>
-        <p>
-          <span>Engine:</span>
-          {' '}
-          {obj.engine}
-        </p>
-        <p>
-          <span>Price:</span>
-          {' '}
-          {obj.price}
-        </p>
-        <p>
-          <span>Total price:</span>
-          {' '}
-          {obj.price}
-        </p>
-      </div>
-    </Wrap>
-  );
-};
+const Description = ({ data }) => (
+  <Wrap>
+    <div>
+      <h2>{data?.title}</h2>
+      <LinkBtn size="small">{data?.fuel}</LinkBtn>
+      <p>
+        <span>Color:</span>
+        {' '}
+        {data?.color}
+      </p>
+      <p>
+        <span>Salon:</span>
+        {' '}
+        {data?.salon}
+      </p>
+      <p>
+        <span>Engine:</span>
+        {' '}
+        {data?.engine}
+      </p>
+      <p>
+        <span>Price:</span>
+        {' '}
+        {data?.price}
+      </p>
+      <p>
+        <span>Total price:</span>
+        {' '}
+        {data?.price}
+      </p>
+    </div>
+    <Test>
+      <p>
+        The Mazda6 offers quality and refinement taken to an even higher level. Stand out on the road with the
+        ultimate thoughtful, elegant and sophisticated exterior design. New technologies ensure the perfect operation
+        of SKYACTIV power units, and driving dynamics have been improved thanks to increased body rigidity, control and
+        braking systems, higher aerodynamic efficiency and reduced noise and vibration.
+      </p>
+    </Test>
+  </Wrap>
+);
 
 export default Description;

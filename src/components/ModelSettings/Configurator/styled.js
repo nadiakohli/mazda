@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const Wrap = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 35vw;
-  height: 775px;
-  box-shadow: 0px 30px 100px rgba(0, 0, 0, 0.35);
+  height: 650px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   padding: 50px 25px;
 `;
 
@@ -11,7 +13,7 @@ export const BlockWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 30%;
+  height: 33%;
 
   & h3 {
     color: ${({ theme: { colors: { mirage } } }) => mirage};

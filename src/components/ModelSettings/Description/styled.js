@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Wrap = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
   justify-content: space-between;
   border-right: ${({ borderRight }) => borderRight ? '3px solid #e3e3e3' : ''};
   margin: 20px 0;
@@ -20,8 +21,12 @@ export const Wrap = styled.div`
 
   & span {
     margin-top: 10px;
-    width: 75%;
+    width: 40%;
     font-size: 14px;
     font-weight: 700;
   }
+`;
+
+export const Test = styled.div`
+  margin-top: 25px;
 `;

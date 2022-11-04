@@ -1,5 +1,9 @@
 import React from 'react';
 
+// Slider
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 // Routes
 import AppRouter from 'routes/AppRouter';
 

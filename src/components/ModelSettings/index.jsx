@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+
+import { cars2 } from 'config/config';
 
 // Components
 import Slider from './Slider';
@@ -10,13 +12,20 @@ import Configurator from './Configurator';
 import { Wrap, ContentWrap } from './styled';
 
 const ModelSettings = () => {
-  const params = useParams();
-  console.log(params);
+  const { id } = useParams();
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    const obj = cars2.find((item) => item.id === +id);
+    setData(obj !== -1 ? obj : {});
+  }, [id]);
+
+  console.log(data);
   return (
     <Wrap>
       <ContentWrap>
-        <Slider />
-        <Description />
+        <Slider images={data.image} />
+        <Description data={data} />
       </ContentWrap>
       <div>
         <Configurator />

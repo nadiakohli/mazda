@@ -1,15 +1,38 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-
-// Images
-import mazda6 from 'assets/images/mazda6.png';
+import Slider from 'react-slick';
 
 // Styles
-import { Wrap } from './styled';
+import {
+  ImageWrap,
+  Image,
+  Wrapper,
+} from './styled';
 
-const Slider = () => (
-  <Wrap>
-    <img src={mazda6} alt="mazda6" />
-  </Wrap>
-);
+const ModelSlider = ({ images }) => {
+  const settings = {
+    centerMode: false,
+    draggable: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+  };
 
-export default Slider;
+  return (
+    <Wrapper>
+      <div>
+        <Slider {...settings}>
+          {images
+            ? images.map((item) => (
+              <ImageWrap key={item}>
+                <Image src={`${item}`} />
+              </ImageWrap>
+            ))
+            : ''}
+        </Slider>
+      </div>
+    </Wrapper>
+  );
+};
+
+export default ModelSlider;
