@@ -1,9 +1,9 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Styles
 import { LinkBtn } from 'components/common/AnotherCard/styled';
-import { Wrap, Test } from './styled';
+import { Wrap, ParagraphWrap } from './styled';
 
 const Description = ({ data }) => (
   <Wrap>
@@ -26,25 +26,43 @@ const Description = ({ data }) => (
         {data?.engine}
       </p>
       <p>
+        <span>Alloy wheel:</span>
+        {' '}
+        {data?.alloyWheel}
+      </p>
+      <p>
         <span>Price:</span>
         {' '}
         {data?.price}
+        {' '}
+        $
       </p>
       <p>
         <span>Total price:</span>
         {' '}
         {data?.price}
+        {' '}
+        $
       </p>
     </div>
-    <Test>
+    <ParagraphWrap>
       <p>
-        The Mazda6 offers quality and refinement taken to an even higher level. Stand out on the road with the
-        ultimate thoughtful, elegant and sophisticated exterior design. New technologies ensure the perfect operation
-        of SKYACTIV power units, and driving dynamics have been improved thanks to increased body rigidity, control and
-        braking systems, higher aerodynamic efficiency and reduced noise and vibration.
+        {data?.description}
       </p>
-    </Test>
+    </ParagraphWrap>
   </Wrap>
 );
+
+Description.propTypes = {
+  data: {
+    title: PropTypes.string.isRequired,
+    fuel: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired,
+    salon: PropTypes.string.isRequired,
+    engine: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    alloyWheel: PropTypes.string.isRequired,
+  }.isRequired,
+};
 
 export default Description;

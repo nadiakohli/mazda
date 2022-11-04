@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+
+// Images
 import mazdaDriving from 'assets/images/mazdaDriving.jpg';
 
 export const Wrap = styled.div`

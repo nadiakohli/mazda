@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { cars2 } from 'config/config';
+import { carsModel } from 'config/config';
 
 // Components
 import Slider from './Slider';
@@ -16,7 +16,7 @@ const ModelSettings = () => {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    const obj = cars2.find((item) => item.id === +id);
+    const obj = carsModel.find((item) => item.id === +id);
     setData(obj !== -1 ? obj : {});
   }, [id]);
 

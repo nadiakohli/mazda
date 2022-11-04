@@ -27,6 +27,6 @@ export const Wrap = styled.div`
   }
 `;
 
-export const Test = styled.div`
+export const ParagraphWrap = styled.div`
   margin-top: 25px;
 `;

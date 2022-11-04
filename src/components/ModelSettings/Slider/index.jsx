@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import Slider from 'react-slick';
+import PropTypes from 'prop-types';
 
 // Styles
 import {
@@ -33,6 +33,10 @@ const ModelSlider = ({ images }) => {
       </div>
     </Wrapper>
   );
+};
+
+ModelSlider.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default ModelSlider;

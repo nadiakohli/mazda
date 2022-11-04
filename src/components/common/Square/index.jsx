@@ -12,11 +12,7 @@ Square.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
-  ]),
-};
-
-Square.defaultProps = {
-  children: '',
+  ]).isRequired,
 };
 
 export default Square;
