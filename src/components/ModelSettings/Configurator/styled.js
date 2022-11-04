@@ -4,7 +4,7 @@ export const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   width: 35vw;
-  height: 650px;
+  height: 700px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   padding: 50px 25px;
 `;
@@ -12,8 +12,9 @@ export const Wrap = styled.div`
 export const BlockWrap = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 33%;
+  justify-content: space-around;
+  height: 40%;
+  border-top: ${({ borderTop }) => borderTop ? '1px solid #D5D5D5' : ''};
 
   & h3 {
     color: ${({ theme: { colors: { mirage } } }) => mirage};

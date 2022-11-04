@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { carColors, salonTypes, wheelTypes } from 'config/config';
 
@@ -8,7 +9,7 @@ import Square from 'components/common/Square';
 // Styles
 import { Wrap, BlockWrap, ContentWrap } from './styled';
 
-const Configurator = () => (
+const Configurator = ({ data }) => (
   <Wrap>
     <BlockWrap>
       <h3>Color</h3>
@@ -46,7 +47,22 @@ const Configurator = () => (
           : null}
       </ContentWrap>
     </BlockWrap>
+    <BlockWrap borderTop>
+      <h3>
+        Total price:
+        {' '}
+        {data.price}
+        {' '}
+        $
+      </h3>
+    </BlockWrap>
   </Wrap>
 );
+
+Configurator.propTypes = {
+  data: {
+    price: PropTypes.number.isRequired,
+  }.isRequired,
+};
 
 export default Configurator;

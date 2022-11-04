@@ -28,7 +28,7 @@ const ModelSettings = () => {
         <Description data={data} />
       </ContentWrap>
       <div>
-        <Configurator />
+        <Configurator data={data} />
       </div>
     </Wrap>
   );
