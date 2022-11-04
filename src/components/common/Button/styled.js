@@ -1,6 +1,34 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const ButtonStyle = styled.button`
+const Black = css`
+  color: ${({ theme: { colors: { white } } }) => white};
+  border: 2px solid ${({ theme: { colors: { black } } }) => black};
+  background-color: ${({ theme: { colors: { black } } }) => black};
+
+  &:hover {
+    color: ${({ theme: { colors: { black } } }) => black};
+    border: 2px solid ${({ theme: { colors: { black } } }) => black};
+    background-color: transparent;
+  }
+`;
+
+const White = css`
+  color: ${({ theme: { colors: { black } } }) => black};
+  border: 2px solid ${({ theme: { colors: { white } } }) => white};
+  background-color: ${({ theme: { colors: { white } } }) => white};
+
+  &:hover {
+    background-color: transparent;
+    color: ${({ theme: { colors: { white } } }) => white};
+  }
+`;
+
+export const ButtonStyle = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   width: 150px;
   height: 40px;
   margin: 25px 0;
@@ -13,6 +41,18 @@ export const ButtonStyle = styled.button`
   font-family: ${({ theme: { fonts: { ubuntu } } }) => ubuntu};
   border: 2px solid ${({ theme: { colors: { white } } }) => white};
   background-color: ${({ theme: { colors: { white } } }) => white};
+
+  && {
+    ${({ color }) => {
+    switch (color) {
+      case 'black':
+        return Black;
+      case 'white':
+      default:
+        return White;
+    }
+  }}
+  }
 
   &:hover {
     background-color: transparent;

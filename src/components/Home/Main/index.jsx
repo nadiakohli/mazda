@@ -13,7 +13,7 @@ const Main = () => (
     <ContentWrap>
       <Title>Introducing the mazda 3</Title>
       <span>The driver&apos;s suv</span>
-      <Button>Explore</Button>
+      <Button color="white">Explore</Button>
     </ContentWrap>
   </Wrap>
 );
