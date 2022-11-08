@@ -10,9 +10,14 @@ export const HeaderWrap = styled.header`
   padding: ${({ padding }) => padding ? '0' : '0 135px'};
   background-color: ${({ backgroundColor }) => backgroundColor || 'transparent'};
 
+  @media screen and (max-width: 1280px) {
+    padding: ${({ padding }) => padding ? '0' : '0 25px'};
+  }
+
   @media screen and (max-width: 768px) {
     height: 65px;
   }
+
 
   & svg {
     height: 22px;

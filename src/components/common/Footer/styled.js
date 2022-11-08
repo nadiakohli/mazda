@@ -94,7 +94,7 @@ export const SpanWrap = styled.div`
   width: 40%;
   margin-bottom: 15px;
 
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 1400px) {
     width: 100%;
   }
   
