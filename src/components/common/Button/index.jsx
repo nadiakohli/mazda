@@ -4,13 +4,19 @@ import PropTypes from 'prop-types';
 // Styles
 import { ButtonStyle } from './styled';
 
-const Button = ({ children, color, to }) => (
-  <ButtonStyle color={color} to={`${to}`}>
+const Button = ({
+  children,
+  onClick,
+  color,
+  to,
+}) => (
+  <ButtonStyle onClick={onClick} color={color} to={`${to}`}>
     {children}
   </ButtonStyle>
 );
 
 Button.propTypes = {
+  onClick: PropTypes.func,
   color: PropTypes.string,
   to: PropTypes.string,
   children: PropTypes.oneOfType([
@@ -20,6 +26,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  onClick: () => {},
   color: '',
   to: '',
 };
