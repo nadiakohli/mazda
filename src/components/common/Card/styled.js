@@ -39,6 +39,7 @@ export const DescriptionWrap = styled.div`
   }
 
   & img {
-    height: 100%;
+    max-height: 100%;
+    width: 100%;
   }
-`;
+  `;
