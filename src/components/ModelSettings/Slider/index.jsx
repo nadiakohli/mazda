@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 // Styles
 import {
-  ImageWrap,
+  // ImageWrap,
   Image,
   Wrapper,
 } from './styled';
@@ -24,9 +24,9 @@ const ModelSlider = ({ images }) => {
         <Slider {...settings}>
           {images
             ? images?.map((img) => (
-              <ImageWrap key={img}>
+              <div key={img}>
                 <Image src={`${img}`} />
-              </ImageWrap>
+              </div>
             ))
             : ''}
         </Slider>

@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { carsModel, modelColors } from 'config/config';
 
 // Components
+import ModelSlider from './Slider';
 import Description from './Description';
 import Configurator from './Configurator';
 
@@ -64,9 +65,10 @@ const ModelSettings = () => {
   return (
     <Wrap>
       <ContentWrap>
-        <ImgWrap>
+        {/* <ImgWrap>
           <img src={data?.image} alt="model colors" />
-        </ImgWrap>
+        </ImgWrap> */}
+        <ModelSlider images={data?.image} />
         <Description data={data} totalPrice={totalAmount} />
       </ContentWrap>
       <div>
