@@ -23,9 +23,9 @@ const ModelSlider = ({ images }) => {
       <div>
         <Slider {...settings}>
           {images
-            ? images.map((item) => (
-              <ImageWrap key={item}>
-                <Image src={`${item}`} />
+            ? images?.map((img) => (
+              <ImageWrap key={img}>
+                <Image src={`${img}`} />
               </ImageWrap>
             ))
             : ''}
@@ -36,7 +36,11 @@ const ModelSlider = ({ images }) => {
 };
 
 ModelSlider.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  images: PropTypes.arrayOf(PropTypes.string),
+};
+
+ModelSlider.defaultProps = {
+  images: [],
 };
 
 export default ModelSlider;

@@ -7,15 +7,10 @@ export const Wrap = styled.div`
 `;
 
 export const ImageWrap = styled.div`
-  height: 275px;
-  position: relative;
-  background: linear-gradient(to bottom, #D5D5D5 49%, #D5D5D5 1%, white 1%, white 50%);
+  height: 325px;
 
   & img {
     width: 100%;
-    position: absolute;
-    bottom: 50px;
-    right: 0;
   }
 `;
 

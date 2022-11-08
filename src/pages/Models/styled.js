@@ -4,6 +4,7 @@ export const Wrap = styled.div`
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: ${({ theme: { colors: { whiteSmoke } } }) => whiteSmoke};
 `;
 
 export const ContentWrap = styled.div`
@@ -28,7 +29,7 @@ export const ContentWrap = styled.div`
 
 export const TitleWrap = styled.div`
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   padding-bottom: 25px;
   border-bottom: 1px solid ${({ theme: { colors: { quillGray } } }) => quillGray};
 `;

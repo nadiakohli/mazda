@@ -4,6 +4,7 @@ export const Wrap = styled.div`
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: ${({ theme: { colors: { whiteSmoke } } }) => whiteSmoke};
 `;
 
 export const ContentWrap = styled.div`

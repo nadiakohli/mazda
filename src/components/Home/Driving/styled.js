@@ -42,7 +42,6 @@ export const ContentWrap = styled.div`
 
   & p {
     line-height: 1.7;
-    /* width: 55%; */
     font-size: 14px;
     font-weight: 400;
   }

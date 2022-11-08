@@ -1,24 +1,32 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
 import PropTypes from 'prop-types';
 
 import { carColors, salonTypes, wheelTypes } from 'config/config';
 
-// Components
-import Square from 'components/common/Square';
-
 // Styles
 import { Wrap, BlockWrap, ContentWrap } from './styled';
 
-const Configurator = ({ data }) => (
+const Configurator = ({
+  data,
+  handleColorChange,
+  handleSalonChange,
+  handleWheelChange,
+  totalPrice,
+}) => (
   <Wrap>
     <BlockWrap>
       <h3>Color</h3>
       <ContentWrap>
         {carColors.length
-          ? carColors.map((item) => (
-            <Square key={item.id}>
+          ? carColors.map((item, id) => (
+            <div
+              key={item.id}
+              className={`${data?.color === item.colorName ? 'active' : ''}`}
+              onClick={() => handleColorChange(carColors[id])}
+            >
               <img src={item.image} alt="car color" />
-            </Square>
+            </div>
           ))
           : null}
       </ContentWrap>
@@ -27,10 +35,14 @@ const Configurator = ({ data }) => (
       <h3>Salon</h3>
       <ContentWrap>
         {salonTypes.length
-          ? salonTypes.map((item) => (
-            <Square key={item.id}>
+          ? salonTypes.map((item, id) => (
+            <div
+              key={item.id}
+              className={`${data?.salon === item.type ? 'active' : ''}`}
+              onClick={() => handleSalonChange(salonTypes[id])}
+            >
               <img src={item.image} alt="salon type" />
-            </Square>
+            </div>
           ))
           : null}
       </ContentWrap>
@@ -39,10 +51,14 @@ const Configurator = ({ data }) => (
       <h3>Alloy wheels</h3>
       <ContentWrap>
         {wheelTypes.length
-          ? wheelTypes.map((item) => (
-            <Square key={item.id}>
+          ? wheelTypes.map((item, id) => (
+            <div
+              key={item.id}
+              className={`${data?.wheel === item.wheel ? 'active' : ''}`}
+              onClick={() => handleWheelChange(wheelTypes[id])}
+            >
               <img src={item.image} alt="wheel type" />
-            </Square>
+            </div>
           ))
           : null}
       </ContentWrap>
@@ -51,7 +67,7 @@ const Configurator = ({ data }) => (
       <h3>
         Total price:
         {' '}
-        {data.price}
+        {totalPrice}
         {' '}
         $
       </h3>
@@ -60,9 +76,15 @@ const Configurator = ({ data }) => (
 );
 
 Configurator.propTypes = {
-  data: {
-    price: PropTypes.number.isRequired,
-  }.isRequired,
+  data: PropTypes.shape({
+    color: PropTypes.string,
+    salon: PropTypes.string,
+    wheel: PropTypes.string,
+  }).isRequired,
+  totalPrice: PropTypes.number.isRequired,
+  handleColorChange: PropTypes.func.isRequired,
+  handleSalonChange: PropTypes.func.isRequired,
+  handleWheelChange: PropTypes.func.isRequired,
 };
 
 export default Configurator;

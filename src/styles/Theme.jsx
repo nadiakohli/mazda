@@ -11,12 +11,14 @@ import bold from 'assets/fonts/Ubuntu-Bold.ttf';
 export const theme = {
   colors: {
     white: '#ffffff',
+    whiteSmoke: '#f5f5f5',
     black: '#000000',
     mirage: '#191919',
     monsoon: '#d5dadf',
     platinum: '#e3e3e3',
-    quillGray: '#D5D5D5',
-    dawn: '#9FA19F',
+    quillGray: '#d5d5d5',
+    dawn: '#9fa19f',
+    granite: '#808080',
   },
   fonts: {
     ubuntu: 'Ubuntu, sans-serif',

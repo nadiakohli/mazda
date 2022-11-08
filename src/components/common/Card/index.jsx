@@ -23,11 +23,11 @@ Card.propTypes = {
   link: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  borderRight: PropTypes.string,
+  borderRight: PropTypes.bool,
 };
 
 Card.defaultProps = {
-  borderRight: '',
+  borderRight: false,
 };
 
 export default Card;

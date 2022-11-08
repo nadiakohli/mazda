@@ -28,13 +28,13 @@ const Models = () => (
             <AnotherCard
               to={item.id}
               key={item.id}
-              link={item.image[0]}
+              link={item.image}
               title={item.title}
               fuel={item.fuel}
               color={item.color}
               salon={item.salon}
               engine={item.engine}
-              alloyWheel={item.alloyWheel}
+              wheel={item.wheel}
               price={item.price}
             />
           ))

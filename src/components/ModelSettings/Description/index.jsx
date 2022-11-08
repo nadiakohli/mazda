@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { LinkBtn } from 'components/common/AnotherCard/styled';
 import { Wrap, ParagraphWrap } from './styled';
 
-const Description = ({ data }) => (
+const Description = ({ data, totalPrice }) => (
   <Wrap>
     <div>
       <h2>{data?.title}</h2>
@@ -28,7 +28,7 @@ const Description = ({ data }) => (
       <p>
         <span>Alloy wheel:</span>
         {' '}
-        {data?.alloyWheel}
+        {data?.wheel}
       </p>
       <p>
         <span>Price:</span>
@@ -40,7 +40,7 @@ const Description = ({ data }) => (
       <p>
         <span>Total price:</span>
         {' '}
-        {data?.price}
+        {totalPrice}
         {' '}
         $
       </p>
@@ -54,15 +54,17 @@ const Description = ({ data }) => (
 );
 
 Description.propTypes = {
-  data: {
-    title: PropTypes.string.isRequired,
-    fuel: PropTypes.string.isRequired,
-    color: PropTypes.string.isRequired,
-    salon: PropTypes.string.isRequired,
-    engine: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    alloyWheel: PropTypes.string.isRequired,
-  }.isRequired,
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    fuel: PropTypes.string,
+    color: PropTypes.string,
+    salon: PropTypes.string,
+    engine: PropTypes.string,
+    price: PropTypes.number,
+    wheel: PropTypes.string,
+    description: PropTypes.string,
+  }).isRequired,
+  totalPrice: PropTypes.number.isRequired,
 };
 
 export default Description;

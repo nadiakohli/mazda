@@ -1,29 +1,34 @@
-// Cars of cars
-import model1 from 'assets/images/mazdaCX9.jpg';
-import model2 from 'assets/images/mazda3.jpg';
-import model3 from 'assets/images/mazda6.avif';
+// Images of cars
+import mazdaCX9 from 'assets/images/mazdaCX9.jpg';
+import mazda3 from 'assets/images/mazda3.jpg';
+import mazda6 from 'assets/images/mazda6.avif';
 
-import mazda61 from 'assets/images/1_mazda6.png';
-import mazda62 from 'assets/images/2_mazda6.png';
-import mazda63 from 'assets/images/3_mazda6.png';
+import mazda6Red from 'assets/images/1_mazda6Red.jpg';
+import mazda6Black from 'assets/images/1_mazda6Black.jpg';
+import mazda6Gray from 'assets/images/1_mazda6Gray.jpg';
+import mazda6White from 'assets/images/1_mazda6White.jpg';
 
-import mazdaCX301 from 'assets/images/1_mazdaCX30.png';
-import mazdaCX302 from 'assets/images/2_mazdaCX30.png';
-import mazdaCX303 from 'assets/images/3_mazdaCX30.png';
+import mazdaCX30Red from 'assets/images/1_mazdaCX30Red.jpg';
+import mazdaCX30Black from 'assets/images/1_mazdaCX30Black.jpg';
+import mazdaCX30Gray from 'assets/images/1_mazdaCX30Gray.jpg';
+import mazdaCX30White from 'assets/images/1_mazdaCX30White.jpg';
 
-import mazdaCX51 from 'assets/images/1_mazdaCX5.png';
-import mazdaCX52 from 'assets/images/2_mazdaCX5.png';
-import mazdaCX53 from 'assets/images/3_mazdaCX5.png';
+import mazdaCX5Red from 'assets/images/1_mazdaCX5Red.jpg';
+import mazdaCX5Black from 'assets/images/1_mazdaCX5Black.jpg';
+import mazdaCX5Gray from 'assets/images/1_mazdaCX5Gray.jpg';
+import mazdaCX5White from 'assets/images/1_mazdaCX5White.jpg';
 
-import mazdaCX91 from 'assets/images/1_mazdaCX9.png';
-import mazdaCX92 from 'assets/images/2_mazdaCX9.png';
-import mazdaCX93 from 'assets/images/3_mazdaCX9.png';
+import mazdaCX9Red from 'assets/images/1_mazdaCX9Red.jpg';
+import mazdaCX9Black from 'assets/images/1_mazdaCX9Black.jpg';
+import mazdaCX9Gray from 'assets/images/1_mazdaCX9Gray.jpg';
+import mazdaCX9White from 'assets/images/1_mazdaCX9White.jpg';
 
-import mazdaMX51 from 'assets/images/1_mazdaMX5.png';
-import mazdaMX52 from 'assets/images/2_mazdaMX5.png';
-import mazdaMX53 from 'assets/images/3_mazdaMX5.png';
+import mazdaMX5Red from 'assets/images/1_mazdaMX5Red.jpg';
+import mazdaMX5Black from 'assets/images/1_mazdaMX5Black.jpg';
+import mazdaMX5Gray from 'assets/images/1_mazdaMX5Gray.jpg';
+import mazdaMX5White from 'assets/images/1_mazdaMX5White.jpg';
 
-// Image for configuration settings page
+// Images for configuration settings page
 import red from 'assets/images/red.webp';
 import black from 'assets/images/black.webp';
 import white from 'assets/images/white.webp';
@@ -42,19 +47,19 @@ import standart from 'assets/images/alloyWheel4.jpg';
 export const cars = [
   {
     id: 1,
-    image: model1,
+    image: mazdaCX9,
     title: 'The 2022 Mazda CX9',
     description: 'Mazda CX-9 is the flagship three-row midsize crossover SUV.',
   },
   {
     id: 2,
-    image: model2,
+    image: mazda3,
     title: 'The 2014 Mazda 3',
     description: 'The 2014 Mazda 3 marks the third generation of the compact car favorite.',
   },
   {
     id: 3,
-    image: model3,
+    image: mazda6,
     title: 'The 2022 Mazda 6',
     description: 'The Mazda 6 is a mid-size sedan produced by Mazda since 2002 with the 1st generation.',
   },
@@ -63,61 +68,61 @@ export const cars = [
 export const carsModel = [
   {
     id: 1,
-    image: [mazda61, mazda62, mazda63],
+    image: mazda6Red,
     title: 'MAZDA 6',
     fuel: 'PETROL',
     color: 'red',
     salon: 'leather black',
     engine: 'Skyactiv-G',
-    alloyWheel: 'standart',
+    wheel: 'deluxe',
     price: 33625,
     description: 'The Mazda6 offers quality and refinement taken to an even higher level. Stand out on the road with the ultimate thoughtful, elegant and sophisticated exterior design. New technologies ensure the perfect operation of SKYACTIV power units, and driving dynamics have been improved thanks to increased body rigidity, control and braking systems, higher aerodynamic efficiency and reduced noise and vibration.',
   },
   {
     id: 2,
-    image: [mazdaCX301, mazdaCX302, mazdaCX303],
+    image: mazdaCX30Red,
     title: 'MAZDA CX-30',
     fuel: 'PETROL',
     color: 'red',
     salon: 'leather black',
     engine: 'Skyactiv-G TURBO',
-    alloyWheel: 'standart',
+    wheel: 'deluxe',
     price: 30680,
     description: 'The urban jungle is a natural environment for your Mazda CX-30. You can easily drive through narrow streets and comfortably park the entire car even in conditions of limited space.',
   },
   {
     id: 3,
-    image: [mazdaCX51, mazdaCX52, mazdaCX53],
+    image: mazdaCX5Red,
     title: 'MAZDA CX-5',
     fuel: 'PETROL',
     color: 'red',
     salon: 'leather black',
     engine: 'Skyactiv-G',
-    alloyWheel: 'standart',
+    wheel: 'standart',
     price: 32400,
     description: 'A combination of pure beauty – body and interior lines, space for the whole family, unparalleled dynamics and the latest safety solutions. No matter where you are headed, the 2022 Mazda CX-5 will be your ideal companion for both everyday trips and long trips with the whole family. Designed to inspire both passengers and passers-by. A combination of pure beauty body and interior lines, space for the whole family, unparalleled dynamics and the latest safety solutions. No matter where you are headed, the 2022 Mazda CX-5 will be your ideal companion for both everyday trips and long trips with the whole family. Designed to inspire both passengers and passers-by.',
   },
   {
     id: 4,
-    image: [mazdaCX91, mazdaCX92, mazdaCX93],
+    image: mazdaCX9Red,
     title: 'MAZDA CX-9',
     fuel: 'PETROL',
-    color: 'dark gray',
+    color: 'red',
     salon: 'leather black',
     engine: 'Skyactiv-G TURBO',
-    alloyWheel: 'standart',
+    wheel: 'standart',
     price: 47290,
     description: 'The Mazda CX-9 7-seater crossover is equally exciting to look at, sit in the cabin or travel in, and remains worthy of the highest praise thanks to its high-class design, premium interior equipment, inspired driving pleasure and innovative SKYACTIV technologies.',
   },
   {
     id: 5,
-    image: [mazdaMX51, mazdaMX52, mazdaMX53],
+    image: mazdaMX5Red,
     title: 'MAZDA MX-5',
     fuel: 'PETROL',
     color: 'red',
     salon: 'leather black',
     engine: 'Skyactiv-G',
-    alloyWheel: 'standart',
+    wheel: 'standart',
     price: 44050,
     description: 'Collecting more than 280 awards around the world in its thirty-year history, the MX-5 has become a symbol of Mazda\'s automotive philosophy and the unconditional embodiment of the Jinba Ittai approach, a completely intuitive and natural connection between the car and the driver, which has characterized this legendary roadster since the first day of its appearance.',
   },
@@ -126,23 +131,27 @@ export const carsModel = [
 export const carColors = [
   {
     id: 1,
-    color: 'red',
+    colorName: 'red',
     image: red,
+    price: 1100,
   },
   {
     id: 2,
-    color: 'black',
+    colorName: 'black',
     image: black,
+    price: 2200,
   },
   {
     id: 3,
-    color: 'white',
+    colorName: 'white',
     image: white,
+    price: 2800,
   },
   {
     id: 4,
-    color: 'gray',
+    colorName: 'gray',
     image: gray,
+    price: 3000,
   },
 ];
 
@@ -151,43 +160,104 @@ export const salonTypes = [
     id: 1,
     type: 'leather black',
     image: leatherBlack,
+    price: 2400,
   },
   {
     id: 2,
     type: 'leather red',
     image: leatherRed,
+    price: 2000,
   },
   {
     id: 3,
     type: 'leather brown',
     image: leatherBrown,
+    price: 1700,
   },
   {
     id: 4,
     type: 'textile black',
     image: textileBlack,
+    price: 1000,
   },
 ];
 
 export const wheelTypes = [
   {
     id: 1,
-    type: 'premium black',
+    wheel: 'premium black',
     image: premiumBlack,
+    price: 2000,
   },
   {
     id: 2,
-    type: 'premium gray',
+    wheel: 'premium gray',
     image: premiumGray,
+    price: 1600,
   },
   {
     id: 3,
-    type: 'deluxe',
+    wheel: 'deluxe',
     image: deluxe,
+    price: 1850,
   },
   {
     id: 4,
-    type: 'standart',
+    wheel: 'standart',
     image: standart,
+    price: 1000,
+  },
+];
+
+export const modelColors = [
+  {
+    id: 1,
+    model: 'MAZDA 6',
+    colors: {
+      red: mazda6Red,
+      black: mazda6Black,
+      gray: mazda6Gray,
+      white: mazda6White,
+    },
+  },
+  {
+    id: 2,
+    model: 'MAZDA CX-30',
+    colors: {
+      red: mazdaCX30Red,
+      black: mazdaCX30Black,
+      gray: mazdaCX30Gray,
+      white: mazdaCX30White,
+    },
+  },
+  {
+    id: 3,
+    model: 'MAZDA CX-5',
+    colors: {
+      red: mazdaCX5Red,
+      black: mazdaCX5Black,
+      gray: mazdaCX5Gray,
+      white: mazdaCX5White,
+    },
+  },
+  {
+    id: 4,
+    model: 'MAZDA CX-9',
+    colors: {
+      red: mazdaCX9Red,
+      black: mazdaCX9Black,
+      gray: mazdaCX9Gray,
+      white: mazdaCX9White,
+    },
+  },
+  {
+    id: 5,
+    model: 'MAZDA MX-5',
+    colors: {
+      red: mazdaMX5Red,
+      black: mazdaMX5Black,
+      gray: mazdaMX5Gray,
+      white: mazdaMX5White,
+    },
   },
 ];

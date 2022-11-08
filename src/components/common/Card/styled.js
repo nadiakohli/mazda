@@ -35,6 +35,10 @@ export const DescriptionWrap = styled.div`
     width: 75%;
     font-size: 14px;
     font-weight: 700;
-    color: gray;
+    color: ${({ theme: { colors: { granite } } }) => granite};
+  }
+
+  & img {
+    height: 100%;
   }
 `;
