@@ -5,6 +5,9 @@ import {
   Route,
 } from 'react-router-dom';
 
+// Helpers
+import ScrollToTop from 'helpers/ScrollToTop';
+
 // Pages
 import Home from 'pages/Home';
 import Models from 'pages/Models';
@@ -14,6 +17,7 @@ import NotFound from 'pages/NotFound';
 
 const AppRouter = () => (
   <Router>
+    <ScrollToTop />
     <Routes>
       <Route index element={<Home />} />
       <Route path="/models" element={<Models />} />
