@@ -30,16 +30,10 @@ const Header = ({ backgroundColor }) => {
             <NavLink to="/models">Models</NavLink>
           </li>
           <li>
-            <NavLink to="/">Shooping Tools</NavLink>
-          </li>
-          <li>
-            <NavLink to="/">Why mazda</NavLink>
-          </li>
-          <li>
             <NavLink to="/">Owners</NavLink>
           </li>
           <li>
-            <NavLink to="/">Find a dealer</NavLink>
+            <NavLink to="/">Why mazda</NavLink>
           </li>
           <li>
             <NavLink to="/">

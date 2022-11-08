@@ -23,7 +23,7 @@ export const HeaderWrap = styled.header`
   }
 
   & nav {
-    width: 70%;
+    width: 50%;
   }
 
   & ul {
