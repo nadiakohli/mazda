@@ -9,6 +9,7 @@ import {
 import Home from 'pages/Home';
 import Models from 'pages/Models';
 import Configurator from 'pages/Configurator';
+import Owners from 'pages/Owners';
 import NotFound from 'pages/NotFound';
 
 const AppRouter = () => (
@@ -17,6 +18,7 @@ const AppRouter = () => (
       <Route index element={<Home />} />
       <Route path="/models" element={<Models />} />
       <Route path="/models/:id" element={<Configurator />} />
+      <Route path="/owners" element={<Owners />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </Router>

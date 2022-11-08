@@ -8,9 +8,10 @@ const Button = ({
   children,
   onClick,
   color,
+  size,
   to,
 }) => (
-  <ButtonStyle onClick={onClick} color={color} to={`${to}`}>
+  <ButtonStyle onClick={onClick} size={size} color={color} to={`${to}`}>
     {children}
   </ButtonStyle>
 );
@@ -18,6 +19,7 @@ const Button = ({
 Button.propTypes = {
   onClick: PropTypes.func,
   color: PropTypes.string,
+  size: PropTypes.string,
   to: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
@@ -28,6 +30,7 @@ Button.propTypes = {
 Button.defaultProps = {
   onClick: () => {},
   color: '',
+  size: '',
   to: '',
 };
 
