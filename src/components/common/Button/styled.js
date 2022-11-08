@@ -54,6 +54,24 @@ export const ButtonStyle = styled(Link)`
   }}
   }
 
+  && {
+    ${({ size }) => {
+    switch (size) {
+      case 'large':
+        return css`
+          width: 250px;
+          height: 50px;
+        `;
+      case 'normal':
+      default:
+        return css`
+        width: 150px;
+        height: 40px;
+      `;
+    }
+  }}
+  }
+
   &:hover {
     background-color: transparent;
     color: ${({ theme: { colors: { white } } }) => white};
