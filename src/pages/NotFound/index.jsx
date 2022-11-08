@@ -15,7 +15,7 @@ import {
 
 const NotFound = () => (
   <Wrap>
-    <Header backgroundColor="#191919" />
+    <Header backgroundColor="#191919" padding />
     <ContentWrap>
       <ImageWrap>
         <h1>Error 404</h1>

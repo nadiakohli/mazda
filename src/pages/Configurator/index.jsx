@@ -14,7 +14,7 @@ import {
 
 const Configurator = () => (
   <Wrap>
-    <Header backgroundColor="#191919" />
+    <Header backgroundColor="#191919" padding />
     <ContentWrap>
       <TitleWrap>
         <h1>Configuration settings</h1>

@@ -17,7 +17,7 @@ import {
 
 const Models = () => (
   <Wrap>
-    <Header backgroundColor="#191919" />
+    <Header backgroundColor="#191919" padding />
     <ContentWrap>
       <TitleWrap>
         <h1>Our Models</h1>
