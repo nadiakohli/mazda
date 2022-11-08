@@ -71,7 +71,7 @@ export const BlocksWrap = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 15px 0;
-  width: 28%;
+  width: 35%;
 
   @media screen and (max-width: 1280px) {
     width: 45%;
@@ -92,10 +92,10 @@ export const SpanWrap = styled.div`
   display: flex;
   justify-content: space-between;
   width: 40%;
+  margin-bottom: 15px;
 
   @media screen and (max-width: 1280px) {
     width: 100%;
-    margin-bottom: 15px;
   }
   
 `;

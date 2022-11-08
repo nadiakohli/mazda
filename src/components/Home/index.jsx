@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <>
       <Wrap>
-        <Header />
+        <Header padding />
         <ContentWrap>
           <Title>Introducing the mazda 3</Title>
           <span>The driver&apos;s suv</span>

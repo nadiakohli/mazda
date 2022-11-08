@@ -48,12 +48,12 @@ const Header = ({ backgroundColor, padding }) => {
 
 Header.propTypes = {
   backgroundColor: PropTypes.string,
-  padding: PropTypes.string,
+  padding: PropTypes.bool,
 };
 
 Header.defaultProps = {
   backgroundColor: '',
-  padding: '',
+  padding: false,
 };
 
 export default Header;

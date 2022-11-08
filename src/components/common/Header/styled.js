@@ -7,7 +7,7 @@ export const HeaderWrap = styled.header`
   align-items: center;
   width: 100%;
   height: 75px;
-  padding: ${({ padding }) => padding ? '0 25px' : ''};
+  padding: ${({ padding }) => padding ? '0' : '0 135px'};
   background-color: ${({ backgroundColor }) => backgroundColor || 'transparent'};
 
   @media screen and (max-width: 768px) {

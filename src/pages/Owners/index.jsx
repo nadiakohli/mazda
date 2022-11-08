@@ -15,7 +15,7 @@ import {
 
 const Owners = () => (
   <Wrap>
-    <Header backgroundColor="#191919" padding />
+    <Header backgroundColor="#191919" />
     <ContentWrap>
       <ImageWrap>
         <h1>To the Mazda&apos;s owners</h1>
