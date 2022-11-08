@@ -42,7 +42,7 @@ const Footer = () => (
         <Span>English</Span>
       </BlockWrap>
     </ContentWrap>
-    <ContentWrap>
+    <ContentWrap flexDirection>
       <SpanWrap>
         <Span>Terms & Conditions</Span>
         <Span>Privacy Policy</Span>
