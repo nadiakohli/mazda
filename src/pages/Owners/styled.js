@@ -35,6 +35,24 @@ export const ImageWrap = styled.div`
     font-weight: 400;
     color: ${({ theme: { colors: { white } } }) => white};
     font-family: ${({ theme: { fonts: { ubuntu } } }) => ubuntu};
+    
+    @media screen and (max-width: 768px) {
+      font-size: 36px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 26px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 320px) {
+      font-size: 21px;
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    align-items: center;
   }
 `;
 
@@ -46,12 +64,25 @@ export const InfoWrap = styled.div`
   height: 500px;
   width: 65%;
 
+  
+  @media screen and (max-width: 480px) {
+    width: 75%;
+  }
+
   & h2 {
     height: 65px;
     font-size: 28px;
     font-weight: 600;
     color: ${({ theme: { colors: { mirage } } }) => mirage};
     font-family: ${({ theme: { fonts: { ubuntu } } }) => ubuntu};
+
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 21px;
+    }
   }
 
   & p {
@@ -60,5 +91,13 @@ export const InfoWrap = styled.div`
     font-weight: 400;
     color: ${({ theme: { colors: { mirage } } }) => mirage};
     font-family: ${({ theme: { fonts: { ubuntu } } }) => ubuntu};
+
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 14px;
+    }
   }
 `;

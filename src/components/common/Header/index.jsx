@@ -16,11 +16,11 @@ import {
   LogoBtn,
 } from './styled';
 
-const Header = ({ backgroundColor }) => {
+const Header = ({ backgroundColor, padding }) => {
   const navigate = useNavigate();
 
   return (
-    <HeaderWrap backgroundColor={backgroundColor}>
+    <HeaderWrap backgroundColor={backgroundColor} padding={padding}>
       <LogoBtn onClick={() => navigate('/', { replace: true })}>
         <Image src={logo} alt="logo" />
       </LogoBtn>
@@ -48,10 +48,12 @@ const Header = ({ backgroundColor }) => {
 
 Header.propTypes = {
   backgroundColor: PropTypes.string,
+  padding: PropTypes.bool,
 };
 
 Header.defaultProps = {
   backgroundColor: '',
+  padding: false,
 };
 
 export default Header;

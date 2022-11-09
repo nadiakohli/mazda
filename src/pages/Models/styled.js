@@ -13,6 +13,13 @@ export const ContentWrap = styled.div`
   justify-content: center;
   align-items: center;
   flex: 1 1 auto;
+`;
+
+export const TitleWrap = styled.div`
+  width: 100%;
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid ${({ theme: { colors: { quillGray } } }) => quillGray};
 
   & h1 {
     display: flex;
@@ -24,14 +31,21 @@ export const ContentWrap = styled.div`
     font-weight: 400;
     color: ${({ theme: { colors: { mirage } } }) => mirage};
     font-family: ${({ theme: { fonts: { ubuntu } } }) => ubuntu};
-  }
-`;
 
-export const TitleWrap = styled.div`
-  width: 100%;
-  margin-bottom: 35px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid ${({ theme: { colors: { quillGray } } }) => quillGray};
+    @media screen and (max-width: 950px) {
+      font-size: 36px;
+      height: 150px;
+    }
+
+    @media screen and (max-width: 768px) {
+      height: 125px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 28px;
+      height: 100px;
+    }
+  }
 `;
 
 export const CardWrap = styled.div`

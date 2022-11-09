@@ -4,11 +4,26 @@ import { Link } from 'react-router-dom';
 export const Wrap = styled.div`
   width: 38%;
   height: 560px;
+
+  @media screen and (max-width: 1100px) {
+    width: 45%;
+  }
+
+  @media screen and (max-width: 950px) {
+    width: 55%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 90%;
+    height: 430px;
+  }
 `;
 
 export const ImageWrap = styled.div`
-  height: 325px;
-
   & img {
     width: 100%;
   }
@@ -20,8 +35,9 @@ export const DescriptionWrap = styled.div`
   justify-content: space-between;
   border-right: ${({ borderRight }) => borderRight ? '3px solid #e3e3e3' : ''};
   margin: 20px 0;
+  width: 100%;
 
-  & h2, span {
+  & h2, span, p {
     font-family: ${({ theme: { fonts: { ubuntu } } }) => ubuntu};
   }
 
@@ -29,6 +45,31 @@ export const DescriptionWrap = styled.div`
     font-size: 28px;
     text-transform: uppercase;
     font-weight: 400;
+
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 21px;
+    }
+
+    @media screen and (max-width: 320px) {
+      font-size: 18px;
+    }
+  }
+
+  & p {
+    line-height: 1.7;
+    font-size: 14px;
+
+    @media screen and (max-width: 480px) {
+      font-size: 13px;
+    }
+
+    @media screen and (max-width: 320px) {
+      font-size: 12px;
+    }
   }
 
   & span {
@@ -36,6 +77,14 @@ export const DescriptionWrap = styled.div`
     width: 75%;
     font-size: 14px;
     font-weight: 700;
+
+    @media screen and (max-width: 480px) {
+      font-size: 13px;
+    }
+
+    @media screen and (max-width: 320px) {
+      font-size: 12px;
+    }
   }
 `;
 
@@ -76,6 +125,17 @@ export const LinkBtn = styled(Link)`
           height: 50px;
           color: ${({ theme: { colors: { mirage } } }) => mirage};
           border: 2px solid ${({ theme: { colors: { mirage } } }) => mirage};
+
+          @media screen and (max-width: 768px) {
+            width: 150px;
+            height: 40px;
+            font-size: 14px;
+          }
+
+          @media screen and (max-width: 768px) {
+            width: 140px;
+            margin-right: 15px;
+          }
         `;
     }
   }}

@@ -1,7 +1,7 @@
 // Images of cars
-import mazdaCX9 from 'assets/images/mazdaCX9.jpg';
 import mazda3 from 'assets/images/mazda3.jpg';
-import mazda6 from 'assets/images/mazda6.avif';
+import mazdaCX30 from 'assets/images/mazdaCX30.jpg';
+import mazdaCX5 from 'assets/images/mazdaCX5.jpg';
 
 import mazda6Red from 'assets/images/1_mazda6Red.jpg';
 import mazda6Black from 'assets/images/1_mazda6Black.jpg';
@@ -87,21 +87,21 @@ import standart from 'assets/images/alloyWheel4.jpg';
 export const cars = [
   {
     id: 1,
-    image: mazdaCX9,
-    title: 'The 2022 Mazda CX9',
-    description: 'Mazda CX-9 is the flagship three-row midsize crossover SUV.',
+    image: mazda3,
+    title: 'The Mazda 3 2022 ',
+    description: 'Every aspect of the Mazda3 is engineered to work in harmony with you.',
   },
   {
     id: 2,
-    image: mazda3,
-    title: 'The 2014 Mazda 3',
-    description: 'The 2014 Mazda 3 marks the third generation of the compact car favorite.',
+    image: mazdaCX30,
+    title: 'The Mazda CX-30 2022',
+    description: 'No matter where your path leads, the Mazda CX-30 with available 2.5 Turbo engine is made to help you follow it.',
   },
   {
     id: 3,
-    image: mazda6,
-    title: 'The 2022 Mazda 6',
-    description: 'The Mazda 6 is a mid-size sedan produced by Mazda since 2002 with the 1st generation.',
+    image: mazdaCX5,
+    title: 'The Mazda CX-5 2021',
+    description: 'The CX-5 rises above all other compact crossovers thanks to its many transcendent traits.',
   },
 ];
 
