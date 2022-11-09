@@ -27,9 +27,6 @@ export const Wrapper = styled(Slider)`
       font-size: 5px;
     }
   }
-  @media screen and (max-width: 320px) {
-    padding: 10px;
-  }
 
   & div {
     background-color: ${({ theme: { colors: { whiteSmoke } } }) => whiteSmoke};
