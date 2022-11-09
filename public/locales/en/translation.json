@@ -1,0 +1,52 @@
+{
+  "home": {
+    "header": {
+      "menu": {
+        "li1": "models",
+        "li2": "owners",
+        "li3": "why Mazda",
+        "li4": "en",
+        "li5": "ua"
+      }
+    },
+    "part2": {
+      "subtitle": "Introducing the Mazda 3",
+      "title": "The driver's suv",
+      "buttonName": "Explore"
+    },
+    "part3": {
+      "card1": {
+        "title": "THE MAZDA 3 2022",
+        "description": "Every aspect of the Mazda3 is engineered to work in harmony with you."
+      },
+      "card2": {
+        "title": "The Mazda CX-30 2022",
+        "description": "No matter where your path leads, the Mazda CX-30 with available 2.5 Turbo engine is made to help you follow it."
+      },
+      "card3": {
+        "title": "The Mazda CX-5 2021",
+        "description": "The CX-5 rises above all other compact crossovers thanks to its many transcendent traits."
+      }
+    },
+    "part4": {
+      "title": "Car and Driver",
+      "subtitle": "The Mazda 3",
+      "description": "Filled with ambitions, the brand&apos;s compact car is offered as a sedan or hatchback with a variety of options for those interested in sophisticated design and engaging driving dynamics. With three engine options, two drivetrains, and many more package options, owners can discover the Mazda3 that best fits with their driving preference."
+    },
+    "part5": {
+      "title": "Driving Matters",
+      "subtitle": "The Mazda CX-30 2022",
+      "description": "Designed to inspire creativity with the freedom to go anywhere, the 2022 CX-30 will further those motivations with standard i-Activ all-wheel drive, which enhances the crossover&apos;s performance. Already recognized for blending quality craftsmanship,sleek styling, and natural dynamic driving, the new Carbon Edition model is a great addition to the crossover&apos;s offerings."
+    },
+    "footer": {
+      "subscribe": "subscribe to updates",
+      "lang1": "en",
+      "lang2": "ua",
+      "li1": "Terms & Conditions",
+      "li2": "Privacy Policy",
+      "li3": "Tell us what you think",
+      "li4": "Ad choices",
+      "rights": "© 2015 Mazda North American operations. All rights reserved."
+    }
+  }
+}

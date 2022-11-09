@@ -18,7 +18,6 @@ export const HeaderWrap = styled.header`
     height: 65px;
   }
 
-
   & svg {
     height: 22px;
     width: 12px;
@@ -37,10 +36,14 @@ export const HeaderWrap = styled.header`
   }
 
   & nav {
-    width: 30%;
+    width: 40%;
 
     @media screen and (max-width: 1100px) {
       width: 50%;
+    }
+
+    @media screen and (max-width: 950px) {
+      width: 60%;
     }
 
     @media screen and (max-width: 480px) {
@@ -110,4 +113,22 @@ export const LogoBtn = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
+`;
+
+export const LangBtn = styled.button`
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: ${({ theme: { fonts: { ubuntu } } }) => ubuntu};
+  font-size: 18px;
+  font-weight: 600;
+  color: ${({ theme: { colors: { monsoon } } }) => monsoon};
+  opacity: 0.8;
+  padding: 0 5px;
+  border-left: ${({ borderLeft }) => borderLeft ? '2px solid white' : null};
+
+  &:hover {
+    color: ${({ theme: { colors: { white } } }) => white};
+    opacity: 1;
+  }
 `;

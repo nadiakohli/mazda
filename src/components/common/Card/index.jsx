@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Translate
+import { useTranslation } from 'react-i18next';
+
 // Styles
 import { Wrap, DescriptionWrap } from './styled';
 
@@ -9,15 +12,19 @@ const Card = ({
   title,
   description,
   borderRight,
-}) => (
-  <Wrap>
-    <img src={link} alt="car model" />
-    <DescriptionWrap borderRight={borderRight}>
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </DescriptionWrap>
-  </Wrap>
-);
+}) => {
+  const { t } = useTranslation();
+  console.log(description);
+  return (
+    <Wrap>
+      <img src={link} alt="car model" />
+      <DescriptionWrap borderRight={borderRight}>
+        <h3>{t(title)}</h3>
+        <p>{t(description)}</p>
+      </DescriptionWrap>
+    </Wrap>
+  );
+};
 
 Card.propTypes = {
   link: PropTypes.string.isRequired,

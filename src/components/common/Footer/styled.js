@@ -101,6 +101,7 @@ export const SpanWrap = styled.div`
 `;
 
 export const Span = styled.span`
+  text-align: center;
   font-size: 12px;
   text-transform: uppercase;
   cursor: pointer;
@@ -126,5 +127,29 @@ export const BlockWrap = styled.div`
 
   @media screen and (max-width: 480px) {
     margin-bottom: 15px;
+  }
+`;
+
+export const LangWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const Btn = styled.button`
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: ${({ theme: { fonts: { ubuntu } } }) => ubuntu};
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: ${({ theme: { colors: { monsoon } } }) => monsoon};
+  opacity: 0.8;
+  padding: 0 5px;
+  border-left: ${({ borderLeft }) => borderLeft ? '2px solid white' : null};
+
+  &:hover {
+    color: ${({ theme: { colors: { white } } }) => white};
+    opacity: 1;
   }
 `;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -9,23 +9,25 @@ import {
 import ScrollToTop from 'helpers/ScrollToTop';
 
 // Pages
-import Home from 'pages/Home';
-import Models from 'pages/Models';
-import Configurator from 'pages/Configurator';
-import Owners from 'pages/Owners';
-import NotFound from 'pages/NotFound';
+const Home = lazy(() => import('pages/Home'));
+const Models = lazy(() => import('pages/Models'));
+const Configurator = lazy(() => import('pages/Configurator'));
+const Owners = lazy(() => import('pages/Owners'));
+const NotFound = lazy(() => import('pages/NotFound'));
 
 const AppRouter = () => (
-  <Router>
-    <ScrollToTop />
-    <Routes>
-      <Route index element={<Home />} />
-      <Route path="/models" element={<Models />} />
-      <Route path="/models/:id" element={<Configurator />} />
-      <Route path="/owners" element={<Owners />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  </Router>
+  <Suspense fallback={<h1>Loading...</h1>}>
+    <Router>
+      <ScrollToTop />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/models" element={<Models />} />
+        <Route path="/models/:id" element={<Configurator />} />
+        <Route path="/owners" element={<Owners />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
+  </Suspense>
 );
 
 export default AppRouter;

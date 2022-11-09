@@ -1,5 +1,8 @@
 import React, { useRef } from 'react';
 
+// Translate
+import { useTranslation } from 'react-i18next';
+
 import { cars } from 'config/config';
 
 // Components
@@ -19,6 +22,8 @@ import {
 } from './styled';
 
 const Home = () => {
+  const { t } = useTranslation();
+  const test = t('home.part3', { returnObjects: true });
   const ref = useRef(null);
   const executeScroll = () => ref.current.scrollIntoView();
 
@@ -27,34 +32,29 @@ const Home = () => {
       <Wrap>
         <Header padding />
         <ContentWrap>
-          <Title>Introducing the mazda 3</Title>
-          <span>The driver&apos;s suv</span>
-          <Button onClick={executeScroll} color="white">Explore</Button>
+          <Title>{t('home.part2.subtitle')}</Title>
+          <span>{t('home.part2.title')}</span>
+          <Button onClick={executeScroll} color="white">{t('home.part2.buttonName')}</Button>
         </ContentWrap>
       </Wrap>
       <CardWrap>
         {cars.length
-          ? cars.map((item) => (
+          ? cars.map((item, i) => (
             <Card
               borderRight
               key={item.id}
               link={item.image}
-              title={item.title}
-              description={item.description}
+              title={t(`home.part3.card${i + 1}.title`)}
+              description={t(`home.part3.card${i + 1}.description`)}
             />
           ))
           : null}
       </CardWrap>
       <AboutModelWrap ref={ref}>
         <ModelContentWrap>
-          <h2>Car and Driver</h2>
-          <span>The Mazda 3</span>
-          <p>
-            Filled with ambitions, the brand&apos;s compact car is offered as a sedan or hatchback
-            with a variety of options for those interested in sophisticated design and engaging
-            driving dynamics. With three engine options, two drivetrains, and many more package
-            options, owners can discover the Mazda3 that best fits with their driving preference.
-          </p>
+          <h2>{t('home.part4.title')}</h2>
+          <span>{t('home.part4.subtitle')}</span>
+          <p>{t('home.part4.description')}</p>
         </ModelContentWrap>
       </AboutModelWrap>
       <Driving />

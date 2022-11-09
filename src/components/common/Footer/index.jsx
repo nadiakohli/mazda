@@ -1,5 +1,9 @@
 import React from 'react';
 
+// Translation
+import i18n from 'utils/i18n';
+import { useTranslation } from 'react-i18next';
+
 // Icons
 import { ReactComponent as Letter } from 'assets/icons/letter.svg';
 import { ReactComponent as Globe } from 'assets/icons/globe.svg';
@@ -18,42 +22,57 @@ import {
   BlockWrap,
   Span,
   SpanWrap,
+  LangWrap,
+  Btn,
 } from './styled';
 
-const Footer = () => (
-  <FooterStyle>
-    <ContentWrap>
-      <BlocksWrap>
-        <BlockWrap>
-          <Letter />
-          <Span>subscribe to updates</Span>
-        </BlockWrap>
+const Footer = () => {
+  const { t } = useTranslation();
+
+  const changeLanguage = lng => {
+    i18n.changeLanguage(lng);
+  };
+
+  return (
+    <FooterStyle>
+      <ContentWrap>
+        <BlocksWrap>
+          <BlockWrap>
+            <Letter />
+            <Span>{t('home.footer.subscribe')}</Span>
+          </BlockWrap>
+          <div>
+            <Facebook />
+            <GooglePlus />
+            <YouTube />
+            <Twitter />
+            <Pinterest />
+            <Instagram />
+          </div>
+        </BlocksWrap>
+        <LangWrap>
+          <BlockWrap>
+            <Globe />
+            <Btn type="button" onClick={() => changeLanguage('en')}>{t('home.footer.lang1')}</Btn>
+          </BlockWrap>
+          <BlockWrap>
+            <Btn borderLeft type="button" onClick={() => changeLanguage('ua')}>{t('home.footer.lang2')}</Btn>
+          </BlockWrap>
+        </LangWrap>
+      </ContentWrap>
+      <ContentWrap flexDirection>
+        <SpanWrap>
+          <Span>{t('home.footer.li1')}</Span>
+          <Span>{t('home.footer.li2')}</Span>
+          <Span>{t('home.footer.li3')}</Span>
+          <Span>{t('home.footer.li4')}</Span>
+        </SpanWrap>
         <div>
-          <Facebook />
-          <GooglePlus />
-          <YouTube />
-          <Twitter />
-          <Pinterest />
-          <Instagram />
+          <Span>{t('home.footer.rights')}</Span>
         </div>
-      </BlocksWrap>
-      <BlockWrap>
-        <Globe />
-        <Span>English</Span>
-      </BlockWrap>
-    </ContentWrap>
-    <ContentWrap flexDirection>
-      <SpanWrap>
-        <Span>Terms & Conditions</Span>
-        <Span>Privacy Policy</Span>
-        <Span>Tell us what you think</Span>
-        <Span>Ad choices</Span>
-      </SpanWrap>
-      <div>
-        <Span>© 2015 Mazda North American operations. All rights reserved.</Span>
-      </div>
-    </ContentWrap>
-  </FooterStyle>
-);
+      </ContentWrap>
+    </FooterStyle>
+  );
+};
 
 export default Footer;
