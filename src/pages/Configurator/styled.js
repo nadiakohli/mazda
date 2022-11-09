@@ -19,12 +19,27 @@ export const ContentWrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 200px;
     text-transform: uppercase;
     font-size: 48px;
     font-weight: 400;
     color: ${({ theme: { colors: { mirage } } }) => mirage};
     font-family: ${({ theme: { fonts: { ubuntu } } }) => ubuntu};
+
+    @media screen and (max-width: 950px) {
+      font-size: 36px;
+      height: 150px;
+    }
+
+    @media screen and (max-width: 768px) {
+      height: 125px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 28px;
+      height: 100px;
+    }
   }
 `;
 

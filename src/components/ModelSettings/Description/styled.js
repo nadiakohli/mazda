@@ -9,7 +9,7 @@ export const Wrap = styled.div`
   margin: 20px 0;
   padding: 25px;
 
-  & h2, span {
+  & h2, span, p {
     font-family: ${({ theme: { fonts: { ubuntu } } }) => ubuntu};
   }
 
@@ -17,6 +17,18 @@ export const Wrap = styled.div`
     font-size: 28px;
     text-transform: uppercase;
     font-weight: 400;
+
+    @media screen and (max-width: 480px) {
+      font-size: 21px;
+    }
+  }
+
+  & p {
+    font-size: 14px;
+    
+    @media screen and (max-width: 480px) {
+      font-size: 12px;
+    }
   }
 
   & span {
@@ -24,6 +36,10 @@ export const Wrap = styled.div`
     width: 40%;
     font-size: 14px;
     font-weight: 700;
+
+    @media screen and (max-width: 480px) {
+      font-size: 12px;
+    }
   }
 `;
 
