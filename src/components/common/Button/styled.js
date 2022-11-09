@@ -25,6 +25,7 @@ const White = css`
 `;
 
 export const ButtonStyle = styled(Link)`
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
