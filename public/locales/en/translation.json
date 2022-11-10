@@ -72,6 +72,7 @@
     "engine": "Engine:",
     "alloyWheel": "Alloy wheel:",
     "price": "Price:",
+    "totalPrice": "Total price:",
     "fuel": "Petrol",
     "buttonName": "More details",
     "model1": {
@@ -81,6 +82,7 @@
       "engine": "Skyactiv-G",
       "wheel": "deluxe",
       "price": 33625,
+      "totalPrice": 33625,
       "description": "The Mazda6 offers quality and refinement taken to an even higher level. Stand out on the road with the ultimate thoughtful, elegant and sophisticated exterior design. New technologies ensure the perfect operation of SKYACTIV power units, and driving dynamics have been improved thanks to increased body rigidity, control and braking systems, higher aerodynamic efficiency and reduced noise and vibration."
     },
     "model2": {
@@ -90,6 +92,7 @@
       "engine": "Skyactiv-G TURBO",
       "wheel": "deluxe",
       "price": 30680,
+      "totalPrice": 30680,
       "description": "The urban jungle is a natural environment for your Mazda CX-30. You can easily drive through narrow streets and comfortably park the entire car even in conditions of limited space."
     },
     "model3": {
@@ -99,6 +102,7 @@
       "engine": "Skyactiv-G",
       "wheel": "standart",
       "price": 32400,
+      "totalPrice": 32400,
       "description": "A combination of pure beauty – body and interior lines, space for the whole family, unparalleled dynamics and the latest safety solutions. No matter where you are headed, the 2022 Mazda CX-5 will be your ideal companion for both everyday trips and long trips with the whole family. Designed to inspire both passengers and passers-by. A combination of pure beauty body and interior lines, space for the whole family, unparalleled dynamics and the latest safety solutions. No matter where you are headed, the 2022 Mazda CX-5 will be your ideal companion for both everyday trips and long trips with the whole family. Designed to inspire both passengers and passers-by."
     },
     "model4": {
@@ -108,6 +112,7 @@
       "engine": "Skyactiv-G TURBO",
       "wheel": "standart",
       "price": 47290,
+      "totalPrice": 47290,
       "description": "The Mazda CX-9 7-seater crossover is equally exciting to look at, sit in the cabin or travel in, and remains worthy of the highest praise thanks to its high-class design, premium interior equipment, inspired driving pleasure and innovative SKYACTIV technologies."
     },
     "model5": {
@@ -117,7 +122,29 @@
       "engine": "Skyactiv-G",
       "wheel": "standart",
       "price": 44050,
+      "totalPrice": 44050,
       "description": "Collecting more than 280 awards around the world in its thirty-year history, the MX-5 has become a symbol of Mazda's automotive philosophy and the unconditional embodiment of the Jinba Ittai approach, a completely intuitive and natural connection between the car and the driver, which has characterized this legendary roadster since the first day of its appearance."
     }
+  },
+  "configurator": {
+    "title": "CONFIGURATION SETTINGS"
+  },
+  "colors": {
+    "red": { "colorName": "red" },
+    "black": { "colorName": "black" },
+    "gray": { "colorName": "gray" },
+    "white": { "colorName": "white" }
+  },
+  "salon": {
+    "leather black": { "type": "leather black" },
+    "leather red": { "type": "leather red" },
+    "leather brown": { "type": "leather brown" },
+    "textile black": { "type": "textile black" }
+  },
+  "wheel": {
+    "premium black": { "type": "premium black" },
+    "premium gray": { "type": "premium gray" },
+    "deluxe": { "type": "deluxe" },
+    "standart": { "type": "standart" }
   }
 }

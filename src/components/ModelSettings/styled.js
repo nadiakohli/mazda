@@ -34,18 +34,3 @@ export const ContentWrap = styled.div`
     width: 98%;
   }
 `;
-
-export const ImgWrap = styled.div`
-  display: flex;
-  justify-content: center;
-  height: 500px;
-
-  @media screen and (max-width: 480px) {
-    height: 250px;
-  }
-  
-  & img {
-    max-height: 100%;
-    max-width: 100%;
-  }
-`;

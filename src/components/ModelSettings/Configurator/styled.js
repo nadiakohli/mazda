@@ -31,16 +31,16 @@ export const BlockWrap = styled.div`
 
   & h3 {
     color: ${({ theme: { colors: { mirage } } }) => mirage};
-    font-size: 36px;
+    font-size: 34px;
     font-family: ${({ theme: { fonts: { ubuntu } } }) => ubuntu};
     font-weight: 500;
 
     @media screen and (max-width: 480px) {
-      font-size: 26px;
+      font-size: 24px;
     }
 
     @media screen and (max-width: 320px) {
-      font-size: 24px;
+      font-size: 21px;
     }
 
     &:last-child {
@@ -83,6 +83,37 @@ export const ContentWrap = styled.div`
     
     &:hover {
       box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    }
+  }
+`;
+
+export const WrapBtn = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+`;
+
+export const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: ${({ theme: { colors: { mirage } } }) => mirage};
+  border: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+
+  :hover {
+    opacity: 0.9;
+  }
+
+  & svg {
+    width: 12px;
+    height: 12px;
+
+    & path {
+      fill: ${({ theme: { colors: { white } } }) => white};;
     }
   }
 `;

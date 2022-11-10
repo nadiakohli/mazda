@@ -9,58 +9,72 @@ import Description from './Description';
 import Configurator from './Configurator';
 
 // Styles
-import { Wrap, ContentWrap, ImgWrap } from './styled';
+import { Wrap, ContentWrap } from './styled';
 
 const ModelSettings = () => {
   const { id } = useParams();
   const [data, setData] = useState({});
-  const [defaultData, setdefaultData] = useState({});
-  const [cost, setCost] = useState({ colorPrice: 0, salonPrice: 0, wheelsPrice: 0 });
+  const [defaultData, setDefaultData] = useState({});
 
   const findColor = modelColors.find((item) => item.id === data.id ? item.colors : '');
 
   useEffect(() => {
     const car = carsModel.find((item) => item.id === +id);
-    setData(car !== -1 ? { ...car, totalPrice: car.price } : {});
-    setdefaultData(car !== -1 ? { ...car, totalPrice: car.price } : {});
+    setData(car !== -1 ? {
+      ...car,
+      totalPrice: car.price,
+      colorPrice: 0,
+      salonPrice: 0,
+      wheelPrice: 0,
+    } : {});
+    setDefaultData(car !== -1 ? {
+      ...car,
+      totalPrice: car.price,
+      colorPrice: 0,
+      salonPrice: 0,
+      wheelPrice: 0,
+    } : {});
   }, [id]);
 
   const handleColorChange = (colorItem) => {
     setData({
       ...data,
       color: colorItem.colorName,
+      colorPrice: defaultData.color === colorItem.colorName ? 0 : colorItem.price,
       image: findColor?.model === data?.title ? findColor?.colors[`${colorItem.colorName}`] : data?.image,
       totalPrice: defaultData.color === colorItem.colorName
         ? defaultData.price
         : defaultData.price + colorItem.price,
     });
-    setCost({ ...cost, colorPrice: defaultData.color === colorItem.colorName ? 0 : colorItem.price });
   };
 
   const handleSalonChange = (salonType) => {
     setData({
       ...data,
       salon: salonType.type,
+      salonPrice: defaultData.salon === salonType.type ? 0 : salonType.price,
       totalPrice: defaultData.salon === salonType.type
         ? defaultData.price
         : defaultData.price + salonType.price,
     });
-    setCost({ ...cost, salonPrice: defaultData.salon === salonType.type ? 0 : salonType.price });
   };
 
   const handleWheelChange = (wheelType) => {
     setData({
       ...data,
       wheel: wheelType.wheel,
+      wheelPrice: defaultData.wheel === wheelType.wheel ? 0 : wheelType.price,
       totalPrice: defaultData.wheel === wheelType.wheel
         ? defaultData.price
         : defaultData.price + wheelType.price,
     });
-    setCost({ ...cost, wheelsPrice: defaultData.wheel === wheelType.wheel ? 0 : wheelType.price });
   };
 
-  const sumPrices = Object.values(cost).reduce((a, b) => a + b, 0);
-  const totalAmount = sumPrices + defaultData.totalPrice;
+  const handleDefaultData = () => {
+    setData(defaultData);
+  };
+
+  const totalAmount = data.colorPrice + data.salonPrice + data.wheelPrice + defaultData.totalPrice;
 
   return (
     <Wrap>
@@ -74,6 +88,7 @@ const ModelSettings = () => {
           handleColorChange={handleColorChange}
           handleSalonChange={handleSalonChange}
           handleWheelChange={handleWheelChange}
+          handleDefaultData={handleDefaultData}
           totalPrice={totalAmount}
         />
       </div>
