@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 
 // Icons
 import { ReactComponent as Letter } from 'assets/icons/letter.svg';
-import { ReactComponent as Globe } from 'assets/icons/globe.svg';
 import { ReactComponent as Facebook } from 'assets/icons/facebook.svg';
 import { ReactComponent as GooglePlus } from 'assets/icons/googlePlus.svg';
 import { ReactComponent as YouTube } from 'assets/icons/youtube.svg';
@@ -52,11 +51,23 @@ const Footer = () => {
         </BlocksWrap>
         <LangWrap>
           <BlockWrap>
-            <Globe />
-            <Btn type="button" onClick={() => changeLanguage('en')}>{t('home.footer.lang1')}</Btn>
+            <Btn
+              type="button"
+              onClick={() => changeLanguage('en')}
+              className={`${i18n.language === 'en' ? 'active' : ''}`}
+            >
+              {t('home.footer.lang1')}
+            </Btn>
           </BlockWrap>
           <BlockWrap>
-            <Btn borderLeft type="button" onClick={() => changeLanguage('ua')}>{t('home.footer.lang2')}</Btn>
+            <Btn
+              borderLeft
+              type="button"
+              onClick={() => changeLanguage('ua')}
+              className={`${i18n.language === 'ua' ? 'active' : ''}`}
+            >
+              {t('home.footer.lang2')}
+            </Btn>
           </BlockWrap>
         </LangWrap>
       </ContentWrap>

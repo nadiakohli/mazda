@@ -5,9 +5,6 @@ import PropTypes from 'prop-types';
 import i18n from 'utils/i18n';
 import { useTranslation } from 'react-i18next';
 
-// Icons
-import { ReactComponent as Globe } from 'assets/icons/globe.svg';
-
 // Images
 import logo from 'assets/images/logo.png';
 
@@ -45,9 +42,21 @@ const Header = ({ backgroundColor, padding }) => {
             <NavLink to="/">{t('home.header.menu.li3')}</NavLink>
           </li>
           <li>
-            <Globe />
-            <LangBtn type="button" onClick={() => changeLanguage('en')}>{t('home.header.menu.li4')}</LangBtn>
-            <LangBtn borderLeft type="button" onClick={() => changeLanguage('ua')}>{t('home.header.menu.li5')}</LangBtn>
+            <LangBtn
+              className={`${i18n.language === 'en' ? 'active' : ''}`}
+              type="button"
+              onClick={() => changeLanguage('en')}
+            >
+              {t('home.header.menu.li4')}
+            </LangBtn>
+            <LangBtn
+              className={`${i18n.language === 'ua' ? 'active' : ''}`}
+              borderLeft
+              type="button"
+              onClick={() => changeLanguage('ua')}
+            >
+              {t('home.header.menu.li5')}
+            </LangBtn>
           </li>
         </ul>
       </nav>

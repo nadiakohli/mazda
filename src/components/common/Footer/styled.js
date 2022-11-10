@@ -125,6 +125,10 @@ export const BlockWrap = styled.div`
   display: flex;
   align-items: center;
 
+  .active {
+    text-shadow: 1px 1px 2px white;
+  }
+
   @media screen and (max-width: 480px) {
     margin-bottom: 15px;
   }

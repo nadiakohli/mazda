@@ -18,23 +18,6 @@ export const HeaderWrap = styled.header`
     height: 65px;
   }
 
-  & svg {
-    height: 22px;
-    width: 12px;
-
-    @media screen and (max-width: 480px) {
-      height: 16px;
-      width: 8px;
-    }
-
-    & path {
-      fill: #d5dadf;
-      &:hover {
-        fill: ${({ theme: { colors: { white } } }) => white};
-      }
-    }
-  }
-
   & nav {
     width: 40%;
 
@@ -60,6 +43,11 @@ export const HeaderWrap = styled.header`
     list-style: none;
     display: flex;
     align-items: center;
+
+    .active {
+      color: ${({ theme: { colors: { mirage } } }) => mirage};
+      text-shadow: 1px 1px 2px white;
+    }
   }
 `;
 
@@ -131,4 +119,5 @@ export const LangBtn = styled.button`
     color: ${({ theme: { colors: { white } } }) => white};
     opacity: 1;
   }
+
 `;
