@@ -65,9 +65,6 @@ const ModelSettings = () => {
   return (
     <Wrap>
       <ContentWrap>
-        {/* <ImgWrap>
-          <img src={data?.image} alt="model colors" />
-        </ImgWrap> */}
         <ModelSlider images={data?.image} />
         <Description data={data} totalPrice={totalAmount} />
       </ContentWrap>

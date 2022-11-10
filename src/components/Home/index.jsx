@@ -23,7 +23,6 @@ import {
 
 const Home = () => {
   const { t } = useTranslation();
-  const test = t('home.part3', { returnObjects: true });
   const ref = useRef(null);
   const executeScroll = () => ref.current.scrollIntoView();
 
