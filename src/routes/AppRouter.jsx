@@ -8,6 +8,9 @@ import {
 // Helpers
 import ScrollToTop from 'helpers/ScrollToTop';
 
+// Components
+import Loader from 'components/common/Loader';
+
 // Pages
 const Home = lazy(() => import('pages/Home'));
 const Models = lazy(() => import('pages/Models'));
@@ -16,7 +19,7 @@ const Owners = lazy(() => import('pages/Owners'));
 const NotFound = lazy(() => import('pages/NotFound'));
 
 const AppRouter = () => (
-  <Suspense fallback={<h1>Loading...</h1>}>
+  <Suspense fallback={<Loader />}>
     <Router>
       <ScrollToTop />
       <Routes>
