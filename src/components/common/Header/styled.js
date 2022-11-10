@@ -45,7 +45,6 @@ export const HeaderWrap = styled.header`
     align-items: center;
 
     .active {
-      color: ${({ theme: { colors: { mirage } } }) => mirage};
       text-shadow: 1px 1px 2px white;
     }
   }
