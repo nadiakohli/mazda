@@ -16,7 +16,7 @@ const ModelSettings = () => {
   const [data, setData] = useState({});
   const [defaultData, setDefaultData] = useState({});
 
-  const findColor = modelColors.find((item) => item.id === data.id ? item.colors : '');
+  const findColor = modelColors.find((item) => item.id === data.id);
 
   useEffect(() => {
     const car = carsModel.find((item) => item.id === +id);
