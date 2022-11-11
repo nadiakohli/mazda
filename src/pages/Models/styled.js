@@ -53,4 +53,6 @@ export const CardWrap = styled.div`
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
+  row-gap: 50px;
+  margin-bottom: 25px;
 `;

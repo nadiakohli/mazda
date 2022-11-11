@@ -4,9 +4,10 @@ import styled from 'styled-components';
 import notFoundImg from 'assets/images/NotFound404.jpg';
 
 export const Wrap = styled.div`
-  min-height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const ContentWrap = styled.div`
@@ -14,7 +15,8 @@ export const ContentWrap = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  flex: 1 1 auto;
+  /* flex: 1 1 auto; */
+  margin-bottom: auto;
 `;
 
 export const ImageWrap = styled.div`

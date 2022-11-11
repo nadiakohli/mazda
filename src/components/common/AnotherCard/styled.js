@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 export const Wrap = styled.div`
   width: 38%;
-  height: 560px;
 
   @media screen and (max-width: 1100px) {
     width: 45%;
@@ -19,7 +18,6 @@ export const Wrap = styled.div`
 
   @media screen and (max-width: 480px) {
     width: 90%;
-    height: 430px;
   }
 `;
 
