@@ -14,19 +14,23 @@ export const Wrap = styled.div`
   background-repeat: no-repeat;
   padding: 0 135px;
 
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 1100px) {
     padding: 0 75px;
+  }
+
+  @media screen and (max-width: 950px) {
+    padding: 0 50px;
     background-position: 65%;
   }
 
   @media screen and (max-width: 768px) {
-    padding: 0 50px;
+    padding: 0 25px;
     background-position: 25%;
     justify-content: center;
   }
 
   @media screen and (max-width: 480px) {
-    padding: 0 25px;
+    padding: 0 15px;
     background-position: 30%;
   }
 `;

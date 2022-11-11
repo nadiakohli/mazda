@@ -18,6 +18,10 @@ export const HeaderWrap = styled.header`
     height: 65px;
   }
 
+  @media screen and (max-width: 480px) {
+    padding: ${({ padding }) => padding ? '0' : '0 15px'};
+  }
+
   & nav {
     width: 40%;
 
@@ -30,11 +34,11 @@ export const HeaderWrap = styled.header`
     }
 
     @media screen and (max-width: 480px) {
-      width: 70%;
+      width: 80%;
     }
 
     @media screen and (max-width: 320px) {
-      width: 75%;
+      width: 82%;
     }
   }
 
@@ -66,6 +70,11 @@ export const Image = styled.img`
   @media screen and (max-width: 480px) {
     height: 30px;
     width: 40px;
+  }
+
+  @media screen and (max-width: 320px) {
+    height: 27px;
+    width: 35px;
   }
 `;
 

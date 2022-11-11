@@ -19,6 +19,7 @@ export const FooterStyle = styled.footer`
 
   @media screen and (max-width: 480px) {
     height: 165px;
+    padding: 0 15px;
   }
 
   & svg {
@@ -151,6 +152,16 @@ export const Btn = styled.button`
   opacity: 0.8;
   padding: 0 5px;
   border-left: ${({ borderLeft }) => borderLeft ? '2px solid white' : null};
+
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 8px;
+    text-align: center;
+  }
+
 
   &:hover {
     color: ${({ theme: { colors: { white } } }) => white};

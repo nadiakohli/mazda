@@ -23,16 +23,17 @@ export const Wrap = styled.div`
 
   @media screen and (max-width: 950px) {
     background-position: 65%;
+    padding: 0 50px;
   }
 
   @media screen and (max-width: 768px) {
     background-position: 30%;
-    padding: 0 50px;
+    padding: 0 25px;
   }
 
   @media screen and (max-width: 480px) {
     background-position: 27%;
-    padding: 0 25px;
+    padding: 0 15px;
   }
 
   & span {
@@ -67,9 +68,17 @@ export const AboutModelWrap = styled.div`
     padding: 0 75px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 950px) {
     padding: 0 50px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 25px;
     background-position: 55%;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 0 15px;
   }
 
 `;
