@@ -32,6 +32,10 @@ export const HeaderWrap = styled.header`
     @media screen and (max-width: 480px) {
       width: 70%;
     }
+
+    @media screen and (max-width: 320px) {
+      width: 75%;
+    }
   }
 
   & ul {
@@ -113,6 +117,22 @@ export const LangBtn = styled.button`
   opacity: 0.8;
   padding: 0 5px;
   border-left: ${({ borderLeft }) => borderLeft ? '2px solid white' : null};
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 13px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 11px;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 10px;
+  }
 
   &:hover {
     color: ${({ theme: { colors: { white } } }) => white};

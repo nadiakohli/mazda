@@ -48,17 +48,15 @@ const Configurator = ({
           $
         </h3>
         <ContentWrap>
-          {carColors.length
-            ? carColors.map((item, id) => (
-              <div
-                key={item.id}
-                className={`${data?.color === item.colorName ? 'active' : ''}`}
-                onClick={() => handleColorChange(carColors[id])}
-              >
-                <img src={item.image} alt="car color" />
-              </div>
-            ))
-            : null}
+          {carColors.map((item, id) => (
+            <div
+              key={item.id}
+              className={`${data?.color === item.colorName ? 'active' : ''}`}
+              onClick={() => handleColorChange(carColors[id])}
+            >
+              <img src={item.image} alt="car color" />
+            </div>
+          ))}
         </ContentWrap>
       </BlockWrap>
       <BlockWrap>
@@ -70,17 +68,15 @@ const Configurator = ({
           $
         </h3>
         <ContentWrap>
-          {salonTypes.length
-            ? salonTypes.map((item, id) => (
-              <div
-                key={item.id}
-                className={`${data?.salon === item.type ? 'active' : ''}`}
-                onClick={() => handleSalonChange(salonTypes[id])}
-              >
-                <img src={item.image} alt="salon type" />
-              </div>
-            ))
-            : null}
+          {salonTypes.map((item, id) => (
+            <div
+              key={item.id}
+              className={`${data?.salon === item.type ? 'active' : ''}`}
+              onClick={() => handleSalonChange(salonTypes[id])}
+            >
+              <img src={item.image} alt="salon type" />
+            </div>
+          ))}
         </ContentWrap>
       </BlockWrap>
       <BlockWrap>
@@ -92,17 +88,15 @@ const Configurator = ({
           $
         </h3>
         <ContentWrap>
-          {wheelTypes.length
-            ? wheelTypes.map((item, id) => (
-              <div
-                key={item.id}
-                className={`${data?.wheel === item.wheel ? 'active' : ''}`}
-                onClick={() => handleWheelChange(wheelTypes[id])}
-              >
-                <img src={item.image} alt="wheel type" />
-              </div>
-            ))
-            : null}
+          {wheelTypes.map((item, id) => (
+            <div
+              key={item.id}
+              className={`${data?.wheel === item.wheel ? 'active' : ''}`}
+              onClick={() => handleWheelChange(wheelTypes[id])}
+            >
+              <img src={item.image} alt="wheel type" />
+            </div>
+          ))}
         </ContentWrap>
       </BlockWrap>
       <BlockWrap borderTop>

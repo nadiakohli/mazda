@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -18,17 +17,17 @@ const Description = ({
   return (
     <Wrap>
       <div>
-        <h2>{t(`models.model${data?.id}.title`)}</h2>
+        <h2>{data?.title}</h2>
         <LinkBtn size="small">{t('models.fuel')}</LinkBtn>
         <p>
           <span>{t('models.color')}</span>
           {' '}
-          {t(`colors.${data?.color}.colorName`)}
+          {t(`configurator.colors.${data?.color}.colorName`)}
         </p>
         <p>
           <span>{t('models.salon')}</span>
           {' '}
-          {t(`salon.${data?.salon}.type`)}
+          {t(`configurator.salon.${data?.salon}.type`)}
         </p>
         <p>
           <span>{t('models.engine')}</span>
@@ -38,7 +37,7 @@ const Description = ({
         <p>
           <span>{t('models.alloyWheel')}</span>
           {' '}
-          {t(`wheel.${data?.wheel}.type`)}
+          {t(`configurator.wheel.${data?.wheel}.type`)}
         </p>
         <p>
           <span>{t('models.price')}</span>
@@ -56,7 +55,7 @@ const Description = ({
         </p>
       </div>
       <ParagraphWrap>
-        <p>{t(`models.model${data?.id}.description`)}</p>
+        <p>{t(`models.${data?.title}.description`)}</p>
       </ParagraphWrap>
     </Wrap>
   );
@@ -64,15 +63,12 @@ const Description = ({
 
 Description.propTypes = {
   data: PropTypes.shape({
-    id: PropTypes.number,
     title: PropTypes.string,
-    fuel: PropTypes.string,
     color: PropTypes.string,
     salon: PropTypes.string,
     engine: PropTypes.string,
     price: PropTypes.number,
     wheel: PropTypes.string,
-    description: PropTypes.string,
   }).isRequired,
   totalPrice: PropTypes.number.isRequired,
 };

@@ -1,0 +1,21 @@
+{
+  "title": "ПАРАМЕТРИ КОНФІГУРАЦІЇ",
+  "colors": {
+    "red": { "colorName": "червоний" },
+    "black": { "colorName": "чорний" },
+    "gray": { "colorName": "сірий" },
+    "white": { "colorName": "білий" }
+  },
+  "salon": {
+    "leather black": { "type": "шкіра чорного кольору" },
+    "leather red": { "type": "шкіра червоного кольору" },
+    "leather brown": { "type": "шкіра коричневого кольору" },
+    "textile black": { "type": "тканина чорного кольору" }
+  },
+  "wheel": {
+    "premium black": { "type": "преміальний чорний" },
+    "premium gray": { "type": "преміальний сірий" },
+    "deluxe": { "type": "люкс" },
+    "standart": { "type": "стандарт" }
+  }
+}

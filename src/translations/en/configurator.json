@@ -1,0 +1,21 @@
+{
+  "title": "CONFIGURATION SETTINGS",
+  "colors": {
+    "red": { "colorName": "red" },
+    "black": { "colorName": "black" },
+    "gray": { "colorName": "gray" },
+    "white": { "colorName": "white" }
+  },
+  "salon": {
+    "leather black": { "type": "leather black" },
+    "leather red": { "type": "leather red" },
+    "leather brown": { "type": "leather brown" },
+    "textile black": { "type": "textile black" }
+  },
+  "wheel": {
+    "premium black": { "type": "premium black" },
+    "premium gray": { "type": "premium gray" },
+    "deluxe": { "type": "deluxe" },
+    "standart": { "type": "standart" }
+  }
+}

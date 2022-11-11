@@ -29,18 +29,18 @@ const Models = () => {
         </TitleWrap>
         <CardWrap>
           {carsModel.length
-            ? carsModel.map((item, i) => (
+            ? carsModel.map((item) => (
               <AnotherCard
                 to={item.id}
                 key={item.id}
-                link={item.image[0]}
-                title={t(`models.model${i + 1}.title`)}
-                fuel={t(`models.model${i + 1}.fuel`)}
-                color={t(`models.model${i + 1}.color`)}
-                salon={t(`models.model${i + 1}.salon`)}
-                engine={t(`models.model${i + 1}.engine`)}
-                wheel={t(`models.model${i + 1}.wheel`)}
-                price={t(`models.model${i + 1}.price`)}
+                link={item?.image[0]}
+                title={item?.title}
+                fuel={t('models.fuel')}
+                color={t(`models.${item.title}.color`)}
+                salon={t(`models.${item.title}.salon`)}
+                engine={item?.engine}
+                wheel={t(`models.${item.title}.wheel`)}
+                price={item?.price}
               />
             ))
             : null}

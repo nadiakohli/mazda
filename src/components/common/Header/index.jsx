@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import i18n from 'utils/i18n';
+// import i18n from 'utils/i18n';
 import { useTranslation } from 'react-i18next';
 
 // Images
@@ -18,7 +18,7 @@ import {
 } from './styled';
 
 const Header = ({ backgroundColor, padding }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
 
   const changeLanguage = (lng) => {
@@ -33,13 +33,13 @@ const Header = ({ backgroundColor, padding }) => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/models">{t('home.header.menu.li1')}</NavLink>
+            <NavLink to="/models">{t('header.menu.li1')}</NavLink>
           </li>
           <li>
-            <NavLink to="/owners">{t('home.header.menu.li2')}</NavLink>
+            <NavLink to="/owners">{t('header.menu.li2')}</NavLink>
           </li>
           <li>
-            <NavLink to="/">{t('home.header.menu.li3')}</NavLink>
+            <NavLink to="/">{t('header.menu.li3')}</NavLink>
           </li>
           <li>
             <LangBtn
@@ -47,7 +47,7 @@ const Header = ({ backgroundColor, padding }) => {
               type="button"
               onClick={() => changeLanguage('en')}
             >
-              {t('home.header.menu.li4')}
+              {t('header.menu.li4')}
             </LangBtn>
             <LangBtn
               className={`${i18n.language === 'ua' ? 'active' : ''}`}
@@ -55,7 +55,7 @@ const Header = ({ backgroundColor, padding }) => {
               type="button"
               onClick={() => changeLanguage('ua')}
             >
-              {t('home.header.menu.li5')}
+              {t('header.menu.li5')}
             </LangBtn>
           </li>
         </ul>

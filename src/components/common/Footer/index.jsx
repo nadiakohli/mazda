@@ -38,7 +38,7 @@ const Footer = () => {
         <BlocksWrap>
           <BlockWrap>
             <Letter />
-            <Span>{t('home.footer.subscribe')}</Span>
+            <Span>{t('footer.subscribe')}</Span>
           </BlockWrap>
           <div>
             <Facebook />
@@ -56,7 +56,7 @@ const Footer = () => {
               onClick={() => changeLanguage('en')}
               className={`${i18n.language === 'en' ? 'active' : ''}`}
             >
-              {t('home.footer.lang1')}
+              {t('footer.lngEn')}
             </Btn>
           </BlockWrap>
           <BlockWrap>
@@ -66,20 +66,20 @@ const Footer = () => {
               onClick={() => changeLanguage('ua')}
               className={`${i18n.language === 'ua' ? 'active' : ''}`}
             >
-              {t('home.footer.lang2')}
+              {t('footer.lngUa')}
             </Btn>
           </BlockWrap>
         </LangWrap>
       </ContentWrap>
       <ContentWrap flexDirection>
         <SpanWrap>
-          <Span>{t('home.footer.li1')}</Span>
-          <Span>{t('home.footer.li2')}</Span>
-          <Span>{t('home.footer.li3')}</Span>
-          <Span>{t('home.footer.li4')}</Span>
+          <Span>{t('footer.li1')}</Span>
+          <Span>{t('footer.li2')}</Span>
+          <Span>{t('footer.li3')}</Span>
+          <Span>{t('footer.li4')}</Span>
         </SpanWrap>
         <div>
-          <Span>{t('home.footer.rights')}</Span>
+          <Span>{t('footer.rights')}</Span>
         </div>
       </ContentWrap>
     </FooterStyle>

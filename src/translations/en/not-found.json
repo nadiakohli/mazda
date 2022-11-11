@@ -1,0 +1,8 @@
+{
+  "title": "Error 404",
+  "info": {
+    "title": "Page not found",
+    "description": "Sorry, the page you want to open doesn't seem to exist.",
+    "buttonName": "Home page"
+  }
+}

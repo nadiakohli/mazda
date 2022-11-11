@@ -1,0 +1,42 @@
+{
+  "title": "Our Models",
+  "color": "Color:",
+  "salon": "Salon:",
+  "engine": "Engine:",
+  "alloyWheel": "Alloy wheel:",
+  "price": "Price:",
+  "totalPrice": "Total price:",
+  "fuel": "Petrol",
+  "buttonName": "More details",
+
+  "MAZDA 6": {
+    "color": "red",
+    "salon": "leather black",
+    "wheel": "deluxe",
+    "description": "The Mazda6 offers quality and refinement taken to an even higher level. Stand out on the road with the ultimate thoughtful, elegant and sophisticated exterior design. New technologies ensure the perfect operation of SKYACTIV power units, and driving dynamics have been improved thanks to increased body rigidity, control and braking systems, higher aerodynamic efficiency and reduced noise and vibration."
+  },
+  "MAZDA CX-30": {
+    "color": "red",
+    "salon": "leather black",
+    "wheel": "deluxe",
+    "description": "The urban jungle is a natural environment for your Mazda CX-30. You can easily drive through narrow streets and comfortably park the entire car even in conditions of limited space."
+  },
+  "MAZDA CX-5": {
+    "color": "red",
+    "salon": "leather black",
+    "wheel": "standart",
+    "description": "A combination of pure beauty – body and interior lines, space for the whole family, unparalleled dynamics and the latest safety solutions. No matter where you are headed, the 2022 Mazda CX-5 will be your ideal companion for both everyday trips and long trips with the whole family. Designed to inspire both passengers and passers-by. A combination of pure beauty body and interior lines, space for the whole family, unparalleled dynamics and the latest safety solutions. No matter where you are headed, the 2022 Mazda CX-5 will be your ideal companion for both everyday trips and long trips with the whole family. Designed to inspire both passengers and passers-by."
+  },
+  "MAZDA CX-9": {
+    "color": "red",
+    "salon": "leather black",
+    "wheel": "standart",
+    "description": "The Mazda CX-9 7-seater crossover is equally exciting to look at, sit in the cabin or travel in, and remains worthy of the highest praise thanks to its high-class design, premium interior equipment, inspired driving pleasure and innovative SKYACTIV technologies."
+  },
+  "MAZDA MX-5": {
+    "color": "red",
+    "salon": "leather black",
+    "wheel": "standart",
+    "description": "Collecting more than 280 awards around the world in its thirty-year history, the MX-5 has become a symbol of Mazda's automotive philosophy and the unconditional embodiment of the Jinba Ittai approach, a completely intuitive and natural connection between the car and the driver, which has characterized this legendary roadster since the first day of its appearance."
+  }
+}

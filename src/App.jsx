@@ -1,5 +1,7 @@
 import React from 'react';
 
+import 'utils/i18n';
+
 // Slider
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

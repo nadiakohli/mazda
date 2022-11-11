@@ -31,9 +31,9 @@ const Home = () => {
       <Wrap>
         <Header padding />
         <ContentWrap>
-          <Title>{t('home.part2.subtitle')}</Title>
-          <span>{t('home.part2.title')}</span>
-          <Button onClick={executeScroll} color="white">{t('home.part2.buttonName')}</Button>
+          <Title>{t('home.description.subtitle')}</Title>
+          <span>{t('home.description.title')}</span>
+          <Button onClick={executeScroll} color="white">{t('home.description.buttonName')}</Button>
         </ContentWrap>
       </Wrap>
       <CardWrap>
@@ -43,17 +43,17 @@ const Home = () => {
               borderRight
               key={item.id}
               link={item.image}
-              title={t(`home.part3.card${i + 1}.title`)}
-              description={t(`home.part3.card${i + 1}.description`)}
+              title={t(`home.cards.card${i + 1}.title`)}
+              description={t(`home.cards.card${i + 1}.description`)}
             />
           ))
           : null}
       </CardWrap>
       <AboutModelWrap ref={ref}>
         <ModelContentWrap>
-          <h2>{t('home.part4.title')}</h2>
-          <span>{t('home.part4.subtitle')}</span>
-          <p>{t('home.part4.description')}</p>
+          <h2>{t('home.aboutModel.title')}</h2>
+          <span>{t('home.aboutModel.subtitle')}</span>
+          <p>{t('home.aboutModel.description')}</p>
         </ModelContentWrap>
       </AboutModelWrap>
       <Driving />
